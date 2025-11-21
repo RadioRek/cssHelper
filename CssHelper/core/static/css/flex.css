@@ -1,0 +1,55 @@
+.contenido {
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.contenedor-inputs-general{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    justify-content: start;
+    align-content: center;
+}
+
+.contenedor-input-individual {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 150px;
+    max-width: 300px;
+    flex-basis: 200px;
+}
+
+/* estilos controles */
+.contenedorControles {
+    display: flex;
+    padding: 8px;
+    border: 2px solid #211832;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+/* estilos base flex */
+.flex-container-1 {
+    box-sizing: border-box;
+    display: flex;
+    padding: 8px;
+    border: 2px solid #211832;
+    border-radius: 16px;
+    gap: 8px;
+}
+
+.flex1-item {
+    border-radius: 8px;
+    min-width: 100px;
+    min-height: 100px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

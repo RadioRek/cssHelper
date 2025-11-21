@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>Flex</title>
+<link rel="stylesheet" href="{% static 'css/flex.css' %}">
+{% endblock head %}
+
+{% block body %}
+
+<div class="contenido">
+
+    <div class="contenedorControles">
+        <fieldset class="contenedor-inputs-general">
+            <legend>Estilos contenedor</legend>
+
+            <!-- tamaño horizontal en % -->
+            <div class="contenedor-input-individual">
+                <label for="tamaño-horizontal">Tamaño Horizontal %:</label>
+                <input type="number" id="tamaño-horizontal" value="100" min="10" max="100">
+            </div>
+
+
+            <!-- tamaño vertical en % -->
+
+            <div class="contenedor-input-individual">
+                <label for="tamaño-vertical">Tamaño Vertical px:</label>
+                <input type="number" id="tamaño-vertical" value="500" min="500">
+            </div>
+
+
+
+            <div class="contenedor-input-individual">
+                <label for="flex-direction">Flex Direction:</label>
+                <select id="flex-direction">
+                    <option value="row">Row</option>
+                    <option value="row-reverse">Row Reverse</option>
+                    <option value="column">Column</option>
+                    <option value="column-reverse">Column Reverse</option>
+                </select>
+            </div>
+
+
+            <div class="contenedor-input-individual">
+                <label for="justify-content">Justify Content:</label>
+                <select id="justify-content">
+                    <option value="flex-start">Flex Start</option>
+                    <option value="flex-end">Flex End</option>
+                    <option value="center">Center</option>
+                    <option value="space-between">Space Between</option>
+                    <option value="space-around">Space Around</option>
+                    <option value="space-evenly">Space Evenly</option>
+                </select>
+            </div>
+
+
+            <div class="contenedor-input-individual">
+                <label for="align-items">Align Items:</label>
+                <select id="align-items">
+                    <option value="stretch">Stretch</option>
+                    <option value="flex-start">Flex Start</option>
+                    <option value="flex-end">Flex End</option>
+                    <option value="center">Center</option>
+                    <option value="baseline">Baseline</option>
+                </select>
+            </div>
+
+            <div class="contenedor-input-individual">
+                <label for="flex-wrap">Flex Wrap:</label>
+                <select id="flex-wrap">
+                    <option value="nowrap">No Wrap</option>
+                    <option value="wrap">Wrap</option>
+                    <option value="wrap-reverse">Wrap Reverse</option>
+                </select>
+            </div>
+
+
+            <div class="contenedor-input-individual">
+                <label for="align-content">Align Content:</label>
+                <select id="align-content">
+                    <option value="stretch">Stretch</option>
+                    <option value="flex-start">Flex Start</option>
+                    <option value="flex-end">Flex End</option>
+                    <option value="center">Center</option>
+                    <option value="space-between">Space Between</option>
+                    <option value="space-around">Space Around</option>
+                </select>
+            </div>
+
+        </fieldset>
+
+        <fieldset class="contenedor-inputs-general">
+            <legend>Estilos ítems</legend>
+
+            <div class="contenedor-input-individual">
+                <button id="add-item">Agregar Ítem</button>
+                <button id="remove-item">Remover Ítem</button>
+            </div>
+
+
+            <div class="contenedor-input-individual">
+                <label for="flex-grow">Flex Grow:</label>
+                <select id="flex-grow">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+
+
+            <div class="contenedor-input-individual">
+                <label for="flex-shrink">Flex Shrink:</label>
+                <select id="flex-shrink">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+
+
+            <div class="contenedor-input-individual">
+                <label for="flex-basis">Flex Basis:</label>
+                <input type="text" id="flex-basis" value="auto">
+            </div>
+        </fieldset>
+    </div>
+
+
+    <div class="flex-container-1" id="flex-container-1">
+
+    </div>
+</div>
+
+
+<script src="{% static 'js/flex.js' %}"></script>
+{% endblock body %}

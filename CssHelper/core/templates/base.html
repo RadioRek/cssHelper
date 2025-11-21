@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block head %}
+
+    {% endblock head %}
+</head>
+
+<body>
+    <nav class="navegacion">
+        <ul class="listaLinks">
+            <li class="linkItem"><a href="{% url 'flex' %}" class="vinculo">Flex</a></li>
+            <li class="linkItem"><a href="{% url 'grid' %}" class="vinculo">Grid</a></li>
+        </ul>
+    </nav>
+    {% block body %}
+
+    {% endblock body %}
+</body>
+</html>

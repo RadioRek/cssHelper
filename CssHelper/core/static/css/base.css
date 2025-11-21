@@ -1,0 +1,115 @@
+.navegacion {
+    background-color: #211832;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.listaLinks {
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.linkItem {
+    list-style: none;
+}
+
+.vinculo {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    border: 2px solid white;
+    border-radius: 1rem;
+    font-size: 1rem;
+}
+
+.head1 {
+    font-family: electrolize;
+    font-size: 2.027rem;
+    margin: 0;
+
+}
+
+.head2 {
+    font-family: electrolize;
+    font-size: 1.802rem;
+    margin: 0;
+
+}
+
+.head3 {
+    font-family: electrolize;
+    font-size: 1.602rem;
+    margin: 0;
+
+}
+
+.head4 {
+    font-family: electrolize;
+    font-size: 1.424rem;
+    margin: 0;
+
+}
+
+.head5 {
+    font-family: electrolize;
+    font-size: 1.266rem;
+    margin: 0;
+
+}
+
+.head6 {
+    font-family: electrolize;
+    font-size: 1.125rem;
+    margin: 0;
+
+}
+
+.parrafo {
+    font-family: electrolize;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.parrafoSmall {
+    font-family: electrolize;
+    font-size: 0.889rem;
+    margin: 0;
+}
+
+.parrafoSmallest {
+    font-family: electrolize;
+    font-size: 0.79rem;
+    margin: 0;
+}
+
+.m0p0 {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+
+h1	2.027rem
+How vexingly quick daft zebras jump
+h2	1.802rem
+How vexingly quick daft zebras jump
+h3	1.602rem
+How vexingly quick daft zebras jump
+h4	1.424rem
+How vexingly quick daft zebras jump
+h5	1.266rem
+How vexingly quick daft zebras jump
+h6	1.125rem
+How vexingly quick daft zebras jump
+p	1rem
+How vexingly quick daft zebras jump
+small	0.889rem
+How vexingly quick daft zebras jump
+0.79rem
+How vexingly quick daft zebras jump
+*/
+
