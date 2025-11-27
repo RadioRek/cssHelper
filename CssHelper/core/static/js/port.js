@@ -58,19 +58,25 @@ function animate() {
 
 function encender(el) {
     let face = el.parentElement;
+    let textoFace = face.querySelector('.head6');
 
     if (el.classList.contains("candleSvgOn")) {
 
         el.classList.remove("candleSvgOn");
         el.classList.add("candleSvgOff");
-        
+        face.classList.remove("parpadearBordeOrange");
+        textoFace.classList.remove("parpadearTextoWhite");
+
     } else {
         el.classList.remove("candleSvgOff");
         el.classList.add("candleSvgOn");
-
+        face.classList.add("parpadearBordeOrange");
+        textoFace.classList.add("parpadearTextoWhite");
     }
 
 }
+
+
 
 
 animate();
