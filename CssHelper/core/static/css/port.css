@@ -1,3 +1,6 @@
+/*==============================================================
+    Seccion: Misc y animaciones compartidas
+==============================================================*/
 @font-face {
     font-family: electrolize;
     src: url(../fonts/Iceland-Regular.ttf);
@@ -18,331 +21,24 @@ html.lenis body {
     scroll-behavior: auto;
 }
 
-.wrapper {
-    height: 100vh;
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 20;
+.parrafoFromSide {
+    animation-name: aparecerTextoFromSide;
 
-}
+    animation-duration: 0.001s;
 
-
-.barraNavegacion {
-    box-sizing: border-box;
-    background-image: url(../img/dude.png);
-    background-size: cover;
-    background-position: center;
-
-    position: relative;
-    top: 0;
-    z-index: 20;
-
-
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
-    height: 100vh;
-
-    animation: encogerBarra both;
-    animation-timeline: scroll();
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
     animation-timing-function: linear;
-    animation-range-end: 75%;
+
+    animation-timeline: view();
+
+    animation-range-start: 20%;
+    animation-range-end: 50%;
 }
 
-.barraNavegacion::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 10;
-}
-
-@keyframes encogerBarra {
-    0% {
-        height: 100vh;
-    }
-
-    100% {
-        height: 8vh;
-    }
-}
-
-.navMenu {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    width: fit-content;
-    position: absolute;
-    z-index: 30;
-
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-
-    animation: navMenuMoverDerecha both;
-    animation-timeline: scroll();
-    animation-timing-function: linear;
-    animation-range-end: 75%;
-}
-
-@keyframes navMenuMoverDerecha {
-    0% {
-        font-size: 1.802rem;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
-    }
-
-    100% {
-        font-size: 1.424rem;
-        top: 50%;
-        right: 1rem;
-        transform: translate(0%, -50%);
-    }
-}
-
-
-.navItem {
-    text-decoration: none;
-    font-family: electrolize;
-    transition: transform 0.3s;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    filter: drop-shadow(0 0 0.75rem #f75c14);
-
-    font-size: inherit;
-
-    border: 3px solid #4e4360;
-    box-shadow: none;
-    color: #4e4360;
-    text-shadow: none;
-
-    animation: parpadearBorde, parpadearTexto;
-    animation-duration: 1s, 1s;
-    animation-iteration-count: infinite, infinite;
-    animation-direction: alternate, alternate;
-    animation-timing-function: cubic-bezier(0.00, 0.99, 1.00, 0.01), cubic-bezier(0.00, 0.99, 1.00, 0.01);
-}
-
-.navItem:hover {
-    transform: scale(1.05);
-}
-
-
-.nombreCont {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    font-size: 2.027rem;
-    z-index: 30;
-
-
-
-    animation: moverNombre both;
-    animation-timeline: scroll();
-    animation-timing-function: linear;
-    animation-range-end: 75%;
-}
-
-.nombre {
-    color: #4e4360;
-    font-size: inherit;
-    font-family: electrolize;
-    text-shadow: none;
-
-    animation: parpadearTexto;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: cubic-bezier(0.00, 0.99, 1.00, 0.01);
-}
-
-@keyframes moverNombre {
-    0% {
-        font-size: 2.027rem;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -30%);
-
-    }
-
-    100% {
-        font-size: 1.424rem;
-        top: 50%;
-        left: 1rem;
-        transform: translate(0, -50%);
-    }
-}
-
-
-.palabrasClave {
-    display: flex;
-    gap: 3rem;
-    color: #4e4360;
-    font-family: electrolize;
-    font-size: 1.802rem;
-    z-index: 30;
-
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-    opacity: 1;
-
-    animation: parpadearTexto;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: cubic-bezier(0.00, 0.99, 1.00, 0.01);
-}
-
-.clave1 {
-    animation: clave1Fade both;
-    animation-timeline: scroll();
-    animation-timing-function: linear;
-    animation-range-end: 35%;
-}
-
-.clave2 {
-    animation: clave2Fade both;
-    animation-timeline: scroll();
-    animation-timing-function: linear;
-    animation-range-end: 20%;
-}
-
-.clave3 {
-    animation: clave3Fade both;
-    animation-timeline: scroll();
-    animation-timing-function: linear;
-    animation-range-end: 5%;
-}
-
-
-@keyframes clave1Fade {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1.2);
-    }
-
-}
-
-@keyframes clave2Fade {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1.2);
-
-    }
-}
-
-@keyframes clave3Fade {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(1.2);
-
-    }
-}
-
-.contSpotlight {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.spotlight {
-    width: 100vw;
-    height: 400px;
-    background: radial-gradient(
-        ellipse at center,
-        rgba(92, 62, 148, 0.35) 0%,
-        rgba(65, 43, 107, 0.15) 20%,
-        rgba(33, 24, 50, 0.05) 40%,
-        transparent 80%
-    );
-    position: absolute;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    pointer-events: none;
-}
-
-
-
-.mainContent {
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
-    z-index: 5;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-    flex-wrap: wrap;
-    width: 70vw;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 30rem;
-    margin-top: 70rem;
-    gap: 2rem;
-    view-timeline: --contenedoresLed block;
-}
-
-.contenedorLed {
-    position: relative;
-    flex-basis: 300px;
-    flex-grow: 1;
-    max-width: 400px;
-    border-radius: 0.5rem;
-    padding: 1rem;
-
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.contenedorLed::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 0.5rem;
-    border: 3px solid #4e4360;
-    opacity: 0;
-    transform: scale(1.05);
-
-    animation-name: aparecerBorde, parpadearBorde;
-
-    animation-duration: 0.001s, 1s;
-
-    animation-iteration-count: 1, infinite;
-    animation-direction: normal, alternate;
-    animation-fill-mode: both, none;
-    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
-
-    animation-timeline: --contenedoresLed, auto;
-
-    animation-range-start: 20%, normal;
-    animation-range-end: 60%, normal;
+.white {
+    color: #faeaff;
 }
 
 @keyframes aparecerBorde {
@@ -357,35 +53,10 @@ html.lenis body {
     }
 }
 
-
-.yoMismisimo {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
-
-    border: 3px solid #4e4360;
-    box-shadow: none;
-
-    animation-name: aparecerYoMismisimo, parpadearBorde;
-
-    animation-duration: 0.001s, 1s;
-
-    animation-iteration-count: 1, infinite;
-    animation-direction: normal, alternate;
-    animation-fill-mode: both, none;
-    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
-
-    animation-timeline: --contenedoresLed, auto;
-
-    animation-range-start: 30%, normal;
-    animation-range-end: 50%, normal;
-}
-
-@keyframes aparecerYoMismisimo {
+@keyframes aparecerBordeGrid {
     0% {
         opacity: 0;
-        transform: scale(1.2);
+        transform: scale(1.025);
     }
 
     100% {
@@ -394,55 +65,16 @@ html.lenis body {
     }
 }
 
-.ledhead {
-    color: #4e4360;
-    text-shadow: none;
-
-    animation-name: aparecerTextoFromSide, parpadearTexto;
-
-    animation-duration: 0.001s, 1s;
-
-    animation-iteration-count: 1, infinite;
-    animation-direction: normal, alternate;
-    animation-fill-mode: both, none;
-    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
-
-    animation-timeline: --contenedoresLed, auto;
-
-    animation-range-start: 30%, normal;
-    animation-range-end: 50%, normal;
-}
-
-.fromSideP {
-    animation-name: aparecerTextoFromSide;
-
-    animation-duration: 0.001s;
-
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: both;
-    animation-timing-function: linear;
-
-    animation-timeline: --contenedoresLed;
-
-    animation-range-start: 30%;
-    animation-range-end: 50%;
-}
-
 @keyframes aparecerTextoFromSide {
     0% {
         opacity: 0;
-        transform: translateX(-10%);
+        transform: translateX(-5%);
     }
 
     100% {
         opacity: 1;
         transform: translateX(0);
     }
-}
-
-.white {
-    color: #faeaff;
 }
 
 @keyframes parpadearTexto {
@@ -470,7 +102,6 @@ html.lenis body {
     }
 }
 
-
 @keyframes parpadearBorde {
     0% {
         border: 3px solid #4e4360;
@@ -490,5 +121,828 @@ html.lenis body {
     100% {
         border: 3px solid #f75c14;
         box-shadow: 0 0 20px 4px #f75c14, inset 0 0 20px 4px #f75c14;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*==============================================================
+    Seccion: Navbar
+==============================================================*/
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    pointer-events: none;
+}
+
+.barraNavegacion,
+.barraNavegacion * {
+    pointer-events: auto;
+}
+
+.barraNavegacion {
+    box-sizing: border-box;
+    background-image: url(../img/dude.png);
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    top: 0;
+    z-index: 20;
+
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+    height: 100vh;
+
+    animation: encogerBarra both;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-range-end: 30%;
+}
+
+.barraNavegacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 10;
+}
+
+.navMenu {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    width: fit-content;
+    position: absolute;
+    z-index: 30;
+
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+
+    animation: navMenuMoverDerecha both;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-range-end: 40%;
+}
+
+.navItem {
+    text-decoration: none;
+    font-family: electrolize;
+    transition: transform 0.3s;
+    border-radius: 0.5rem;
+    padding: 0rem 1rem;
+    filter: drop-shadow(0 0 0.75rem #f75c14);
+
+    font-size: inherit;
+
+    border: 3px solid #4e4360;
+    box-shadow: none;
+    color: #4e4360;
+    text-shadow: none;
+
+    animation: parpadearBorde, parpadearTexto;
+    animation-duration: 1s, 1s;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: alternate, alternate;
+    animation-timing-function: cubic-bezier(0.00, 0.99, 1.00, 0.01), cubic-bezier(0.00, 0.99, 1.00, 0.01);
+}
+
+.navItem:hover {
+    transform: scale(1.1);
+}
+
+.nombreCont {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    font-size: 2.027rem;
+    z-index: 30;
+
+    animation: moverNombre both;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-range-end: 40%;
+}
+
+.nombre {
+    color: #4e4360;
+    font-size: inherit;
+    font-family: electrolize;
+    text-shadow: none;
+
+    animation: parpadearTexto;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.00, 0.99, 1.00, 0.01);
+}
+
+.palabrasClave {
+    display: flex;
+    gap: 3rem;
+    color: #4e4360;
+    font-family: electrolize;
+    font-size: 1.802rem;
+    z-index: 30;
+
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    opacity: 1;
+
+    animation: parpadearTexto;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.00, 0.99, 1.00, 0.01);
+}
+
+.clave1 {
+    animation: claveFadeOut both;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-range-end: 35%;
+}
+
+.clave2 {
+    animation: claveFadeOut both;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-range-end: 20%;
+}
+
+.clave3 {
+    animation: claveFadeOut both;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-range-end: 5%;
+}
+
+.spotlight {
+    width: 100%;
+    bottom: -220px;
+    left: 0;
+    transform: none;
+    position: absolute;
+    height: 400px;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center,
+            rgba(92, 62, 148, 0.35) 0%,
+            rgba(65, 43, 107, 0.15) 20%,
+            rgba(33, 24, 50, 0.05) 40%,
+            transparent 80%);
+
+    animation: fadeIn both;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-range-start: 25%;
+    animation-range-end: 40%;
+}
+
+/*==============================================================
+    Seccion: animaciones Navbar
+==============================================================*/
+@keyframes encogerBarra {
+    0% {
+        height: 100vh;
+    }
+
+    100% {
+        height: 4vh;
+    }
+}
+
+@keyframes navMenuMoverDerecha {
+    0% {
+        font-size: 1.802rem;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    100% {
+        font-size: 1.125rem;
+        top: 50%;
+        right: 1rem;
+        transform: translate(0%, -50%);
+    }
+}
+
+@keyframes moverNombre {
+    0% {
+        font-size: 2.027rem;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+
+    }
+
+    100% {
+        font-size: 1.424rem;
+        top: 50%;
+        left: 1rem;
+        transform: translate(0, -50%);
+    }
+}
+
+@keyframes claveFadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+}
+
+/*==============================================================
+    Seccion: Presentacion principal
+==============================================================*/
+.mainContent {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    z-index: 5;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25rem;
+    margin-top: 50rem;
+    gap: 2rem;
+}
+
+.contenedorLed {
+    position: relative;
+    flex-basis: 300px;
+    flex-grow: 1;
+    max-width: 400px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.contenedorLed::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    border: 3px solid #4e4360;
+    opacity: 0;
+    transform: scale(1.05);
+
+    animation-name: aparecerBorde, parpadearBorde;
+
+    animation-duration: 0.001s, 1s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 20%, normal;
+    animation-range-end: 50%, normal;
+}
+
+.yoMismisimo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    border: 3px solid #4e4360;
+    box-shadow: none;
+
+    animation-name: aparecerYoMismisimo, parpadearBorde;
+
+    animation-duration: 0.001s, 1s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 20%, normal;
+    animation-range-end: 50%, normal;
+}
+
+.ledhead {
+    color: #4e4360;
+    text-shadow: none;
+
+    animation-name: aparecerTextoFromSide, parpadearTexto;
+
+    animation-duration: 0.001s, 1s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 15%, normal;
+    animation-range-end: 50%, normal;
+}
+
+.arrowDown {
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #4e4360;
+    width: 3rem;
+    height: 3rem;
+
+    animation: fadeIn both;
+    animation-timeline: view();
+    animation-timing-function: linear;
+    animation-range-start: 20%;
+    animation-range-end: 50%;
+}
+
+.arrowDown path {
+    fill: currentColor;
+    will-change: color, filter;
+    animation: parpadearSVG 1s infinite alternate cubic-bezier(0.00, 0.99, 1.00, 0.01);
+}
+
+/*==============================================================
+    Seccion: Animaciones Presentacion principal
+==============================================================*/
+@keyframes aparecerYoMismisimo {
+    0% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes parpadearSVG {
+    0% {
+        color: #4e4360;
+        filter: drop-shadow(0 0 0px #b2a4c6);
+    }
+
+    30% {
+        color: #b2a4c6;
+        filter: drop-shadow(0 0 16px #b2a4c6);
+    }
+
+    80% {
+        color: #4e4360;
+        filter: drop-shadow(0 0 0px #b2a4c6);
+    }
+
+    100% {
+        color: #b2a4c6;
+        filter: drop-shadow(0 0 4px #b2a4c6);
+    }
+}
+
+/*==============================================================
+    Seccion: Grid experiencia y tecnologias
+==============================================================*/
+.contentCrazy {
+    position: relative;
+    background-image: url(../img/bgCity.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+
+    animation: fadeIn both;
+    animation-timeline: view();
+    animation-timing-function: ease;
+    animation-range-start: 10%;
+    animation-range-end: 50%;
+}
+
+.contentCrazy::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(14, 12, 18, 0.7);
+    z-index: 1;
+
+}
+
+.turboGrid {
+    display: grid;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "exp comen1 comen2 tecs"
+        "exp comen3 comen4 tecs"
+        "det det det tecs";
+    position: relative;
+    z-index: 2;
+}
+
+.expCont {
+    grid-area: exp;
+}
+
+.expDetalle {
+    grid-area: det;
+}
+
+.comen1 {
+    grid-area: comen1;
+}
+
+.comen2 {
+    grid-area: comen2;
+}
+
+.comen3 {
+    grid-area: comen3;
+}
+
+.comen4 {
+    grid-area: comen4;
+}
+
+.tecsCont {
+    grid-area: tecs;
+}
+
+.gridCont {
+    position: relative;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.gridCont::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    border: 3px solid #4e4360;
+    opacity: 0;
+
+    animation-name: fadeIn, parpadearBorde;
+
+    animation-duration: 0.001s, 1s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 20%, normal;
+    animation-range-end: 50%, normal;
+}
+
+.tecIconList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.imgIcon {
+    max-width: 80px;
+    object-fit: contain;
+    z-index: 30;
+
+    animation-name: aparecerTextoFromSide;
+    animation-duration: 0.001s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-timeline: view();
+    animation-range-start: 20%;
+    animation-range-end: 50%;
+}
+
+
+.expDetalle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+/*==============================================================
+    Seccion: Animaciones Grid experiencia y tecnologias
+==============================================================*/
+
+
+/*==============================================================
+    Seccion: Proyectos grid
+==============================================================*/
+.proyectosCrazy {
+    margin-bottom: 10rem;
+    margin-top: 20rem;
+
+}
+
+.proyectosGrid {
+    display: grid;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    position: relative;
+    z-index: 2;
+    grid-template-areas:
+        "proy1 proy2"
+        "proy3 proy4"
+}
+
+.proyecto1 {
+    grid-area: proy1;
+}
+
+.proyecto2 {
+    grid-area: proy2;
+}
+
+.proyecto3 {
+    grid-area: proy3;
+}
+
+.proyecto4 {
+    grid-area: proy4;
+}
+
+.proyectoItem {
+    position: relative;
+    min-height: 100px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.proyectoItem::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.5rem;
+    border: 3px solid #4e4360;
+    opacity: 0;
+
+    animation-name: fadeIn, parpadearBorde;
+
+    animation-duration: 0.001s, 1s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 20%, normal;
+    animation-range-end: 50%, normal;
+}
+
+.subgridProyecto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    gap: 1rem;
+}
+
+.tecProyectoItem {
+    padding: 1rem;
+
+    border-radius: 0.5rem;
+    border: 3px solid #4e4360;
+    opacity: 0;
+
+    animation-name: fadeIn, parpadearBorde;
+
+    animation-duration: 0.001s, 1s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 20%, normal;
+    animation-range-end: 50%, normal;
+}
+
+
+.imgIconProyecto {
+    max-width: 80px;
+    object-fit: contain;
+    z-index: 30;
+
+    animation-name: aparecerTextoFromSide;
+    animation-duration: 0.001s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+    animation-timeline: view();
+    animation-range-start: 20%;
+    animation-range-end: 50%;
+}
+
+.placeholder {
+    height: 1000px;
+}
+
+
+/*==============================================================
+    Seccion: Cosas interesantes
+==============================================================*/
+.cube-wrapper {
+    width: 300px;
+    height: 300px;
+    perspective: 900px;
+    margin: auto;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.1s linear;
+}
+
+.cube,
+.face {
+    user-select: none;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    color: #4e4360;
+    text-shadow: none;
+
+    pointer-events: auto;
+}
+
+.face::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 3px solid #4e4360;
+    opacity: 0;
+
+    pointer-events: none;
+
+    animation-name: aparecerBordeGrid, parpadearBorde;
+    animation-duration: 0.001s, 1s;
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+    animation-timeline: view(), auto;
+    animation-range-start: 20%, normal;
+    animation-range-end: 50%, normal;
+}
+
+.front {
+    transform: translateZ(150px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(150px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(150px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(150px);
+}
+
+.cosasInteresantes,
+.cosasInteresantes * {
+    pointer-events: auto;
+}
+
+.candleSvgOff {
+    fill: #4e4360;
+    filter: drop-shadow(0 0 0px #4e4360);
+    width: 80px;
+    height: 80px;
+}
+
+.candleSvgOn {
+    fill: #F25912;
+    filter: drop-shadow(0 0 8px #F25912);
+    width: 80px;
+    height: 80px;
+
+    animation: candleFlicker 1s infinite alternate;
+}
+
+
+@keyframes candleFlicker {
+    0% {
+        fill: #F25912;
+        filter: drop-shadow(0 0 8px #F25912);
+    }
+
+    50% {
+        fill: #FF9E40;
+        filter: drop-shadow(0 0 16px #FF9E40);
+    }
+
+    100% {
+        fill: #F25912;
+        filter: drop-shadow(0 0 8px #F25912);
     }
 }

@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block head %}
-<title>Grid</title>
+<title>Carlos</title>
+<link rel="stylesheet" href="{% url 'carlos_css' %}">
 
 {% endblock head %}
 
@@ -10,6 +11,8 @@
 
 <div class="contenido">
 
+    <a href="{% url 'carlos_css' %}"> Ir a carlos</a>
+    <h1>VA A ESTAR ROJO</h1>
 </div>
 
 <script src="{% static 'js/grid.js' %}"></script>
