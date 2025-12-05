@@ -1,9 +1,8 @@
-const lenis = new Lenis({
+let lenis = new Lenis({
     smooth: true,
     lerp: 0.08,
-    wheelMultiplier: 0.4
+    wheelMultiplier: 0.3
 });
-
 
 function raf(time) {
     lenis.raf(time);
@@ -12,8 +11,23 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
+let durations = {
+    "#sobreMi": 1,
+    "#experiencia": 1,
+    "#portfolio": 2,
+    "#contacto": 2
+}
 
-
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', e => {
+        e.preventDefault()
+        const id = link.getAttribute('href')
+        const target = document.querySelector(id)
+        lenis.scrollTo(target, {
+            duration: durations[id]
+        })
+    })
+})
 
 const cube = document.querySelector('.cube');
 
@@ -64,19 +78,93 @@ function encender(el) {
 
         el.classList.remove("candleSvgOn");
         el.classList.add("candleSvgOff");
-        face.classList.remove("parpadearBordeOrange");
-        textoFace.classList.remove("parpadearTextoWhite");
+        el.classList.remove("animCandleFlicker");
+
+        textoFace.textContent = "Click the candle!";
+        textoFace.classList.remove("animTextoParpadear");
+
+        face.classList.remove("animBordeParpadear");
+        face.style.borderRadius = "0rem";
+
+        if (face.classList.contains("front")) {
+            face.style.transform = "translateZ(75px)";
+        }
+
+        if (face.classList.contains("back")) {
+            face.style.transform = "rotateY(180deg) translateZ(75px)";
+        }
+
+        if (face.classList.contains("left")) {
+            face.style.transform = "rotateY(-90deg) translateZ(75px)";
+        }
+
+        if (face.classList.contains("right")) {
+            face.style.transform = "rotateY(90deg) translateZ(75px)";
+        }
+
+        if (face.classList.contains("top")) {
+            face.style.transform = "rotateX(90deg) translateZ(75px)";
+        }
+
+        if (face.classList.contains("bottom")) {
+            face.style.transform = "rotateX(-90deg) translateZ(75px)";
+        }
+
 
     } else {
+
         el.classList.remove("candleSvgOff");
         el.classList.add("candleSvgOn");
-        face.classList.add("parpadearBordeOrange");
-        textoFace.classList.add("parpadearTextoWhite");
+        el.classList.add("animCandleFlicker");
+
+        textoFace.textContent = "The candle is lit!";
+        textoFace.classList.add("animTextoParpadear");
+
+        face.classList.add("animBordeParpadear");
+        face.style.borderRadius = "1rem";
+
+        if (face.classList.contains("front")) {
+            face.style.transform = "translateZ(90px)";
+        }
+
+        if (face.classList.contains("back")) {
+            face.style.transform = "rotateY(180deg) translateZ(90px)";
+        }
+
+        if (face.classList.contains("left")) {
+            face.style.transform = "rotateY(-90deg) translateZ(90px)";
+        }
+
+        if (face.classList.contains("right")) {
+            face.style.transform = "rotateY(90deg) translateZ(90px)";
+        }
+
+        if (face.classList.contains("top")) {
+            face.style.transform = "rotateX(90deg) translateZ(90px)";
+        }
+
+        if (face.classList.contains("bottom")) {
+            face.style.transform = "rotateX(-90deg) translateZ(90px)";
+        }
     }
 
 }
 
 
-
-
 animate();
+
+
+let inputs = document.querySelectorAll('.inputCustom, .textAreaCustom');
+
+inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+        input.classList.remove('animBordeTextoParpadear');
+        input.classList.add('animBordeTextoParpadearNaranja');
+    });
+
+    input.addEventListener('blur', () => {
+        input.classList.remove('animBordeTextoParpadearNaranja');
+        input.classList.add('animBordeTextoParpadear');
+    });
+
+});

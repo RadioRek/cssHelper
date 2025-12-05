@@ -1,0 +1,718 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es" class="lenis lenis-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/img/cat.png' %}">
+
+    <title>Nicolas Ortega</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/port.css' %}">
+    <link rel="stylesheet" href="{% static 'css/port2.css' %}">
+</head>
+
+<body class="animMoveGrid">
+
+    <nav class="barraNavegacion animEncogerBarra">
+
+        <div class="nombreCont animMoverNombre">
+            <h1 class="nombre animTextoParpadear">NICOLAS ORTEGA</h1>
+        </div>
+
+        <div class="navMenu animNavMenuMoverDerecha">
+            <a href="#sobreMi" class="navItem animBordeTextoParpadear">Sobre mí</a>
+            <a href="#experiencia" class="navItem animBordeTextoParpadear">Experiencia</a>
+            <a href="#portfolio" class="navItem animBordeTextoParpadear">Portfolio</a>
+            <a href="#contacto" class="navItem animBordeTextoParpadear">Contacto</a>
+        </div>
+
+        <div class="palabrasClave animTextoParpadear">
+            <span class="animClave1">Creativo</span>
+            <span class="animClave2">Detallista</span>
+            <span class="animClave3">Dedicado</span>
+        </div>
+
+        <div class="spotlight animFadeInScroll"></div>
+    </nav>
+
+
+    <main class="mainContent" id="sobreMi">
+
+        <div class="contenedorLed animAparecerParpadearBorde contenedorYoMismo">
+
+
+            <h2 class="head2 animFadeInFromSideTextoParpadear">Yo mismisimo</h2>
+
+            <p class="parrafo white animFadeInFromSide">Hey! me llamo Nicolas Ortega y soy un desarrollador apasionado
+                por la informatica, me agrada bastante aprender y experimentar con nuevas tecnologias y herramientas.
+                Estoy constantemente buscando nuevas cosas para aprender y crecer profesionalmente.</p>
+
+            <div class="fotoWrap animAparecerParpadearBorde">
+                <img src="{% static 'img/yoMismo3.jpeg' %}" class="yoMismisimo">
+            </div>
+        </div>
+
+        <div class="contenedorLed animAparecerParpadearBorde">
+
+            <h2 class="head2 animFadeInFromSideTextoParpadear">Formacion</h2>
+
+            <p class="parrafo white animFadeInFromSide">Las bases de mis competencias provienen de mi formación en
+                Ingeniería en Informática en Duoc UC. Sin embargo, mi desarrollo profesional real se ha consolidado a
+                través de proyectos personales, experiencia laboral y un proceso constante de autoaprendizaje impulsado
+                por un interés intenso en todas las áreas de la programación. Poseo el título profesional de ingeniería
+                y formación complementaria en gestión de proyectos informáticos, aseguramiento de calidad (QA) y buenas
+                prácticas de código, además de conocimientos en ciencia de datos, machine learning y deep learning.</p>
+
+        </div>
+
+        <div class="contenedorLed animAparecerParpadearBorde">
+            <h2 class="head2 animFadeInFromSideTextoParpadear">Pasatiempos</h2>
+
+            <p class="parrafo white animFadeInFromSide">Disfruto jugar Street Fighter 6, un juego competitivo que exige
+                un control preciso y una ejecución comparable a la práctica de un instrumento musical. Los videojuegos
+                forman
+                parte central de mis intereses; he explorado en profundidad su desarrollo y los considero una forma de
+                arte que integra música, imagen y narrativa en una sola obra interactiva.
+
+                <br>
+                <br>
+
+                Además de los videojuegos, me impulsa el aprendizaje continuo en programación y tecnologías emergentes.
+                Desarrollar proyectos dejó de ser únicamente una actividad laboral y se convirtió en una práctica que
+                realizo por gusto, tanto por el desafío técnico como por la satisfacción de construir algo funcional.
+            </p>
+        </div>
+
+
+        <div class="arrowAndText">
+            <svg viewBox="-2 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                class="arrowDown animFadeInViewParpadearSVG">
+
+                <title>arrow-bottom</title>
+                <desc>Created with Sketch Beta.</desc>
+                <defs>
+
+                </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-519.000000, -931.000000)"
+                        fill="currentColor">
+                        <path
+                            d="M543,935 L540,935 L540,937 L543,937 C544.104,937 545,937.896 545,939 L545,959 C545,960.104 544.104,961 543,961 L523,961 C521.896,961 521,960.104 521,959 L521,939 C521,937.896 521.896,937 523,937 L526,937 L526,935 L523,935 C520.791,935 519,936.791 519,939 L519,959 C519,961.209 520.791,963 523,963 L543,963 C545.209,963 547,961.209 547,959 L547,939 C547,936.791 545.209,935 543,935 L543,935 Z M525.343,949.758 L532.242,956.657 C532.451,956.865 532.728,956.954 533,956.939 C533.272,956.954 533.549,956.865 533.758,956.657 L540.657,949.758 C541.048,949.367 541.048,948.733 540.657,948.343 C540.267,947.953 539.633,947.953 539.242,948.343 L534,953.586 L534,932 C534,931.447 533.553,931 533,931 C532.448,931 532,931.447 532,932 L532,953.586 L526.757,948.343 C526.367,947.953 525.733,947.953 525.343,948.343 C524.952,948.733 524.952,949.367 525.343,949.758 L525.343,949.758 Z"
+                            id="arrow-bottom" sketch:type="MSShapeGroup">
+
+                        </path>
+                    </g>
+                </g>
+            </svg>
+
+            <h2 class="head2 animFadeInTextoParpadear arrowText">Experiencia y Tecnologias</h2>
+
+
+        </div>
+
+    </main>
+
+
+    <section class="experiencia" id="experiencia">
+
+        <div class="contentCrazy animFadeInView">
+
+            <div class="turboGrid">
+
+                <div class="gridCont animAparecerParpadearBorde expCont">
+                    <h2 class="head2 animFadeInFromSideTextoParpadear">Experiencias</h2>
+                    <p class="parrafo white animFadeInFromSide">
+                        Participé en proyectos de desarrollo web y aplicaciones móviles, aplicando habilidades de
+                        programación y diseño. También exploré el desarrollo de videojuegos utilizando Java, Godot y
+                        Roblox Studio, llevando a práctica conceptos como vectorización, detección y gestión de
+                        colisiones mediante SAT, así como la implementación de animaciones basadas en sprites.
+
+                        <br>
+                        <br>
+
+                        Desarrollé sitios web completos con sistemas CRUD integrados a bases de datos PostgreSQL y
+                        MySQL, utilizando Django como framework principal. Implementé API REST con Django Rest Framework
+                        y configuré mecanismos de autenticación y autorización de usuarios. Trabajé con HTML, CSS y
+                        JavaScript para construir interfaces funcionales y claras, empleé Git para control de versiones
+                        y colaboración, y desplegué aplicaciones en servidores utilizando Docker, Nginx y Gunicorn sobre
+                        VPS de Hostinger y EC2 en Amazon Web Services.
+
+                        <br>
+                        <br>
+
+                        He trabajado como profesor de programación, impartiendo clases de Python, Java y SQL entre otras
+                        cosas a estudiantes de diversos niveles y edades.
+                    </p>
+                </div>
+
+                <div class="gridCont animAparecerParpadearBorde comen1">
+                    <h3 class="head3 animFadeInFromSideTextoParpadear">Fabian</h3>
+                    <p class="parrafo white animFadeInFromSide">"Agradecido de su gran vocación y profesionalismo. Es
+                        precisamente lo que necesitaba para avanzar con mis proyectos."</p>
+                    <a class="parrafoSmall white animFadeInFromSide"
+                        href="https://www.superprof.cl/clases-particulares-programacion-python-java-sql-aprende-mano-apasionado-por-programacion.html">www.superprof.cl
+                        →</a>
+                </div>
+
+                <div class="gridCont animAparecerParpadearBorde comen2">
+                    <h3 class="head3 animFadeInFromSideTextoParpadear">Pia</h3>
+                    <p class="parrafo white animFadeInFromSide">"Explica de manera excelente, detallada y con mucha
+                        paciencia. Creo que no había entendido lo que era la programación y cómo funcionaba hasta que
+                        tuve clases con él!! gracias al profe estoy pasando mi ramo de programación, además de darme
+                        tips y páginas para practicar, prepara las clases de manera precisa, 100% recomendado"</p>
+                    <a class="parrafoSmall white animFadeInFromSide"
+                        href="https://www.superprof.cl/clases-particulares-programacion-python-java-sql-aprende-mano-apasionado-por-programacion.html">www.superprof.cl
+                        →</a>
+                </div>
+
+                <div class="gridCont animAparecerParpadearBorde comen3">
+                    <h3 class="head3 animFadeInFromSideTextoParpadear">Diego</h3>
+                    <p class="parrafo white animFadeInFromSide">"El profe explica y pregunta siempre que valla
+                        entendiendo ademas de darse el tiempo de explicar una pregunta especifica y darse el tiempo
+                        necesario para entender me parece estupendo"</p>
+                    <a class="parrafoSmall white animFadeInFromSide"
+                        href="https://www.superprof.cl/clases-particulares-programacion-python-java-sql-aprende-mano-apasionado-por-programacion.html">www.superprof.cl
+                        →</a>
+                </div>
+
+                <div class="gridCont animAparecerParpadearBorde comen4">
+                    <h3 class="head3 animFadeInFromSideTextoParpadear">Paula</h3>
+                    <p class="parrafo white animFadeInFromSide">"Excelente profesor, empático, con disposición, tiene
+                        mucha paciencia, se toma el tiempo para que de verdad uno aprenda, lo recomiendo."</p>
+                    <a class="parrafoSmall white animFadeInFromSide"
+                        href="https://www.superprof.cl/clases-particulares-programacion-python-java-sql-aprende-mano-apasionado-por-programacion.html">www.superprof.cl
+                        →</a>
+                </div>
+
+                <div class="gridCont animAparecerParpadearBorde tecsCont">
+                    <h2 class="head2 animFadeInFromSideTextoParpadear">Estoy habituado a trabajar con</h2>
+
+                    <div class="tecIconList">
+
+                        <img src="{% static 'img/python.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/django.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/html.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/css.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/js.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/git.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/java.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/docker.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/nginx.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/gunicorn.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/bootstrap.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/github.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/postgre.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                        <img src="{% static 'img/mySql.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                    </div>
+                </div>
+
+                <div class="gridCont animAparecerParpadearBorde expDetalle">
+
+                    <div class="exp">
+                        <h2 class="head2 animFadeInFromSideTextoParpadear">Profesor de desarrollo de videojuegos</h2>
+
+                        <p class="parrafo white animFadeInFromSide">Durante 2024 estuve trabajando como profesor de
+                            desarrollo de videojuegos para la empresa algorithmycs, en este trabajo enseñe a jovenes las
+                            bases del desarrollo de videojuegos y llevamos a la practica proyectos usando el motor
+                            roblox studio</p>
+                    </div>
+
+                    <div class="exp">
+                        <h2 class="head2 animFadeInFromSideTextoParpadear">Desarrollo sistema de gestion minimarket
+                            NovaPanel</h2>
+                        <p class="parrafo white animFadeInFromSide">Durante el primer semestre de 2023 desarrollé un
+                            sistema de gestión para un minimarket que abarcaba el ciclo operativo completo del negocio.
+                            El sistema incluía control detallado de inventario con actualización automática de
+                            existencias, registro de ventas en tiempo real y un módulo de administración de empleados
+                            con control de roles y seguimiento de actividad. Incorporé un panel de métricas que permitía
+                            visualizar movimientos de productos, ingresos diarios y rendimiento del personal.
+
+                            <br>
+                            <br>
+
+                            El proyecto también integró hardware externo. Implementé impresión de boletas y reportes
+                            mediante impresoras térmicas, lectura de códigos de barras a través de escáneres físicos y
+                            generación de códigos de barras personalizados para cada empleado. Estos códigos se usaban
+                            como método de autenticación para agilizar el acceso al sistema y reducir errores en el
+                            manejo de terminales.
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="arrowAndText">
+            <svg viewBox="-2 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                class="arrowDown animFadeInViewParpadearSVG">
+
+                <title>arrow-bottom</title>
+                <desc>Created with Sketch Beta.</desc>
+                <defs>
+
+                </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-519.000000, -931.000000)"
+                        fill="currentColor">
+                        <path
+                            d="M543,935 L540,935 L540,937 L543,937 C544.104,937 545,937.896 545,939 L545,959 C545,960.104 544.104,961 543,961 L523,961 C521.896,961 521,960.104 521,959 L521,939 C521,937.896 521.896,937 523,937 L526,937 L526,935 L523,935 C520.791,935 519,936.791 519,939 L519,959 C519,961.209 520.791,963 523,963 L543,963 C545.209,963 547,961.209 547,959 L547,939 C547,936.791 545.209,935 543,935 L543,935 Z M525.343,949.758 L532.242,956.657 C532.451,956.865 532.728,956.954 533,956.939 C533.272,956.954 533.549,956.865 533.758,956.657 L540.657,949.758 C541.048,949.367 541.048,948.733 540.657,948.343 C540.267,947.953 539.633,947.953 539.242,948.343 L534,953.586 L534,932 C534,931.447 533.553,931 533,931 C532.448,931 532,931.447 532,932 L532,953.586 L526.757,948.343 C526.367,947.953 525.733,947.953 525.343,948.343 C524.952,948.733 524.952,949.367 525.343,949.758 L525.343,949.758 Z"
+                            id="arrow-bottom" sketch:type="MSShapeGroup">
+
+                        </path>
+                    </g>
+                </g>
+            </svg>
+
+            <h2 class="head2 animFadeInTextoParpadear arrowText">Proyectos</h2>
+
+
+        </div>
+    </section>
+
+    <section class="proyectosCrazy" id="portfolio">
+
+        <div class="proyectosGrid">
+
+            <div class="proyectoItem animAparecerParpadearBorde proyecto1">
+                <h2 class="head2 animFadeInFromSideTextoParpadear">NovaCommerce</h2>
+
+                <p class="parrafo white animFadeInFromSide">
+                    NovaCommerce es una plataforma de comercio electrónico desarrollada con Django que ofrece una
+                    experiencia de compra en línea completa y segura. Esta enfocada a pequeñas y medianas empresas que
+                    buscan ampliar su presencia en línea y llegar a más clientes. Los usuarios pueden navegar por un
+                    catálogo de productos, agregar artículos a su carrito de compras y realizar pagos. Además,
+                    NovaCommerce incluye funcionalidades administrativas que permiten a los vendedores gestionar
+                    inventarios, procesar pedidos y analizar ventas mediante un panel intuitivo, ofrecer metricas que
+                    ayudan a tomar decisiones estrategicas y cuenta con personalizacion en tiempo real que permite
+                    cambiar los colores, fuentes y logo del sitio sin necesidad de reiniciar los servidores. Todo el
+                    backend implementa una API RESTful construida con Django Rest Framework, asegurando una comunicación
+                    eficiente y segura entre el frontend y el backend.
+                </p>
+
+
+                <div class="killMe">
+                    <h2 class="head2 animFadeInFromSideTextoParpadear stackHead">Stack utilizado</h2>
+
+                    <div class="subgridProyecto">
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/django.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/python.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/html.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/css.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/js.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/git.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/bootstrap.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/mySql.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/dbDiagram.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/github.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/nginx.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/gunicorn.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/hostinger.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="proyectoItem animAparecerParpadearBorde proyecto2">
+                <h2 class="head2 animFadeInFromSideTextoParpadear">Sistema gestion minimarket</h2>
+
+                <p class="parrafo white animFadeInFromSide">
+                    Sistema de gestión integral para minimarket desarrollado con Django, que abarca desde el control de
+                    inventario hasta la administración de empleados. El sistema permite registrar ventas en tiempo real
+                    (con pistola de lectura de codigos de barra), gestionar productos y generar reportes detallados.
+                    Incorpora autenticación mediante códigos de barras para empleados, impresión de boletas y reportes
+                    con impresoras térmicas, y un panel de métricas para analizar el rendimiento del negocio. Esta
+                    solución optimiza las operaciones diarias del minimarket, mejorando la eficiencia y facilitando la
+                    toma de decisiones estratégicas.
+                </p>
+
+                <div class="killMe">
+                    <h2 class="head2 animFadeInFromSideTextoParpadear stackHead">Stack utilizado</h2>
+
+                    <div class="subgridProyecto">
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/django.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/python.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/html.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/css.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/js.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/git.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/bootstrap.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/postgre.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/nginx.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/gunicorn.svg' %}" alt="Gunicorn"
+                                    class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/docker.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+
+                        <div class="tecWrapper animAparecerParpadearBordeNaranja">
+
+                            <div class="tecProyectoItem">
+                                <img src="{% static 'img/aws.svg' %}" alt="" class="imgIcon animFadeInFromSide">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div class="arrowAndText">
+            <svg viewBox="-2 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                class="arrowDown animFadeInViewParpadearSVG">
+
+                <title>arrow-bottom</title>
+                <desc>Created with Sketch Beta.</desc>
+                <defs>
+
+                </defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+                    <g id="Icon-Set" sketch:type="MSLayerGroup" transform="translate(-519.000000, -931.000000)"
+                        fill="currentColor">
+                        <path
+                            d="M543,935 L540,935 L540,937 L543,937 C544.104,937 545,937.896 545,939 L545,959 C545,960.104 544.104,961 543,961 L523,961 C521.896,961 521,960.104 521,959 L521,939 C521,937.896 521.896,937 523,937 L526,937 L526,935 L523,935 C520.791,935 519,936.791 519,939 L519,959 C519,961.209 520.791,963 523,963 L543,963 C545.209,963 547,961.209 547,959 L547,939 C547,936.791 545.209,935 543,935 L543,935 Z M525.343,949.758 L532.242,956.657 C532.451,956.865 532.728,956.954 533,956.939 C533.272,956.954 533.549,956.865 533.758,956.657 L540.657,949.758 C541.048,949.367 541.048,948.733 540.657,948.343 C540.267,947.953 539.633,947.953 539.242,948.343 L534,953.586 L534,932 C534,931.447 533.553,931 533,931 C532.448,931 532,931.447 532,932 L532,953.586 L526.757,948.343 C526.367,947.953 525.733,947.953 525.343,948.343 C524.952,948.733 524.952,949.367 525.343,949.758 L525.343,949.758 Z"
+                            id="arrow-bottom" sketch:type="MSShapeGroup">
+
+                        </path>
+                    </g>
+                </g>
+            </svg>
+
+            <h2 class="head2 animFadeInTextoParpadear arrowText">Juega un momento</h2>
+
+
+        </div>
+
+    </section>
+
+    <section class="cosasInteresantes">
+
+        <div class="snake animAparecerParpadearBorde">
+
+            <div class="loosingScreen" id="loosingScreenSnake">
+
+                <div class="loosingCard animBordeParpadear">
+                    <h4 class="head4 animTextoParpadear" id="loosingMessageSnake">Quedate a jugar un ratillo</h4>
+                    <p class="parrafo animTextoParpadear" id="finalScoreSnake"></p>
+
+                    <div class="btnSnakeContainer">
+                        <button class="navItem animBordeTextoParpadear botonReset" onclick="resetGame()"
+                            id="resetButtonSnake">Play!</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="espacioSnake">
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footerPortafolio" id="contacto">
+
+        <div class="formularioGoz animAparecerParpadearBorde">
+
+            <form method="POST" class="formularioContacto" action="">
+                {% csrf_token %}
+                <h2 class="head2 animTextoParpadear">Contactame</h2>
+
+                <div class="inputContainer">
+                    <label for="nombre" class="parrafoSmall animTextoParpadear">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="inputCustom animBordeTextoParpadear" required>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="email" class="parrafoSmall animTextoParpadear">Email</label>
+                    <input type="email" id="email" name="email" class="inputCustom animBordeTextoParpadear" required>
+                </div>
+
+                <div class="inputContainer">
+                    <label for="mensaje" class="parrafoSmall animTextoParpadear">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" class="textAreaCustom animBordeTextoParpadear" rows="8"
+                        required></textarea>
+                </div>
+
+                <div class="botonContainer">
+
+                    <button class="botonContacto animBordeTextoParpadear">Enviar</button>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="cubitoGoz">
+
+            <div class="clickAndDrag animAparecerParpadearBorde">
+
+                <div class="cube-wrapper">
+
+                    <div class="cube">
+
+                        <div class="face front">
+                            <h6 class="head6 headCubo">Drag me!</h6>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                id="Candle--Streamline-Rounded-Material" class="candleSvgOff candleSvg"
+                                onclick="encender(this)">
+                                <desc>
+                                    Candle Streamline Icon: https://streamlinehq.com
+                                </desc>
+                                <path fill="currentColor"
+                                    d="M6 20.5004h12c0.425 0 0.78125 -0.14375 1.06875 -0.43125 0.2875 -0.2875 0.43125 -0.64375 0.43125 -1.06875v-0.5H4.5v0.475c0 0.43215 0.14375 0.7943 0.43125 1.0865 0.2875 0.29235 0.64375 0.4385 1.06875 0.4385Zm5.975 -12.5c-0.76665 0 -1.4125 -0.27085 -1.9375 -0.8125 -0.525 -0.5417 -0.7875 -1.19585 -0.7875 -1.9625 0 -0.80001 0.23335 -1.504175 0.7 -2.11251 0.46665 -0.608335 0.975 -1.154165 1.525 -1.6375 0.08415 -0.066665 0.1719 -0.116665 0.26325 -0.15 0.09115 -0.033335 0.1784 -0.05 0.26175 -0.05 0.08335 0 0.16665 0.016665 0.25 0.05 0.08335 0.033335 0.16665 0.091665 0.25 0.175 0.51665 0.516665 1.02085 1.066665 1.5125 1.65 0.49165 0.583335 0.7375 1.275 0.7375 2.07501 0 0.76665 -0.27085 1.4208 -0.8125 1.9625 -0.54165 0.54165 -1.19585 0.8125 -1.9625 0.8125Zm-1.5 9H13.5v-6.5h-3.025v6.5Zm1.525 -10.5c0.33335 0 0.625 -0.1157 0.875 -0.347 0.25 -0.2312 0.375 -0.51375 0.375 -0.84775 0 -0.43684 -0.1319 -0.817425 -0.39575 -1.14176 -0.264 -0.3245 -0.54875 -0.637335 -0.85425 -0.9385 -0.3055 0.301165 -0.59025 0.614 -0.85425 0.9385 -0.26385 0.324335 -0.39575 0.70492 -0.39575 1.14176 0 0.334 0.125 0.61655 0.375 0.84775 0.25 0.2313 0.54165 0.347 0.875 0.347Zm8.45 10.5c0.28335 0 0.52915 -0.1042 0.7375 -0.3125 0.20835 -0.20835 0.3125 -0.4542 0.3125 -0.7375 0 -0.28335 -0.10415 -0.525 -0.3125 -0.725 -0.20835 -0.2 -0.45415 -0.3 -0.7375 -0.3 -0.28335 0 -0.52915 0.1 -0.7375 0.3 -0.20835 0.2 -0.3125 0.44165 -0.3125 0.725 0 0.2833 0.10415 0.52915 0.3125 0.7375 0.20835 0.2083 0.45415 0.3125 0.7375 0.3125Zm-2.45 5H6c-0.83335 0 -1.541665 -0.2917 -2.125 -0.875 -0.583335 -0.58335 -0.875 -1.3 -0.875 -2.15v-1.225c0 -0.2125 0.071915 -0.3907 0.21575 -0.5345 0.143665 -0.1437 0.32175 -0.2155 0.53425 -0.2155h5.225v-6.5c0 -0.4125 0.1469 -0.7657 0.44075 -1.0595 0.29365 -0.2937 0.64675 -0.4405 1.05925 -0.4405H13.5c0.4125 0 0.76565 0.1468 1.0595 0.4405 0.29365 0.2938 0.4405 0.647 0.4405 1.0595v6.5h3.125c-0.08335 -0.1667 -0.14165 -0.3375 -0.175 -0.5125 -0.03335 -0.175 -0.05 -0.3542 -0.05 -0.5375 0 -0.704 0.25 -1.30085 0.75 -1.7905 0.5 -0.4897 1.1 -0.7345 1.8 -0.7345s1.3 0.2448 1.8 0.7345c0.5 0.48965 0.75 1.0865 0.75 1.7905 0 0.61665 -0.1875 1.15415 -0.5625 1.6125 -0.375 0.4583 -0.85415 0.75415 -1.4375 0.8875v0.55c0 0.8333 -0.29165 1.54165 -0.875 2.125 -0.58335 0.5833 -1.29165 0.875 -2.125 0.875Z"
+                                    stroke-width="0.5"></path>
+                            </svg>
+                        </div>
+
+                        <div class="face back">
+                            <h2 class="head6 headCubo">Click the candle!</h2>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                id="Candle--Streamline-Rounded-Material" class="candleSvgOff candleSvg"
+                                onclick="encender(this)">
+                                <desc>
+                                    Candle Streamline Icon: https://streamlinehq.com
+                                </desc>
+                                <path fill="currentColor"
+                                    d="M6 20.5004h12c0.425 0 0.78125 -0.14375 1.06875 -0.43125 0.2875 -0.2875 0.43125 -0.64375 0.43125 -1.06875v-0.5H4.5v0.475c0 0.43215 0.14375 0.7943 0.43125 1.0865 0.2875 0.29235 0.64375 0.4385 1.06875 0.4385Zm5.975 -12.5c-0.76665 0 -1.4125 -0.27085 -1.9375 -0.8125 -0.525 -0.5417 -0.7875 -1.19585 -0.7875 -1.9625 0 -0.80001 0.23335 -1.504175 0.7 -2.11251 0.46665 -0.608335 0.975 -1.154165 1.525 -1.6375 0.08415 -0.066665 0.1719 -0.116665 0.26325 -0.15 0.09115 -0.033335 0.1784 -0.05 0.26175 -0.05 0.08335 0 0.16665 0.016665 0.25 0.05 0.08335 0.033335 0.16665 0.091665 0.25 0.175 0.51665 0.516665 1.02085 1.066665 1.5125 1.65 0.49165 0.583335 0.7375 1.275 0.7375 2.07501 0 0.76665 -0.27085 1.4208 -0.8125 1.9625 -0.54165 0.54165 -1.19585 0.8125 -1.9625 0.8125Zm-1.5 9H13.5v-6.5h-3.025v6.5Zm1.525 -10.5c0.33335 0 0.625 -0.1157 0.875 -0.347 0.25 -0.2312 0.375 -0.51375 0.375 -0.84775 0 -0.43684 -0.1319 -0.817425 -0.39575 -1.14176 -0.264 -0.3245 -0.54875 -0.637335 -0.85425 -0.9385 -0.3055 0.301165 -0.59025 0.614 -0.85425 0.9385 -0.26385 0.324335 -0.39575 0.70492 -0.39575 1.14176 0 0.334 0.125 0.61655 0.375 0.84775 0.25 0.2313 0.54165 0.347 0.875 0.347Zm8.45 10.5c0.28335 0 0.52915 -0.1042 0.7375 -0.3125 0.20835 -0.20835 0.3125 -0.4542 0.3125 -0.7375 0 -0.28335 -0.10415 -0.525 -0.3125 -0.725 -0.20835 -0.2 -0.45415 -0.3 -0.7375 -0.3 -0.28335 0 -0.52915 0.1 -0.7375 0.3 -0.20835 0.2 -0.3125 0.44165 -0.3125 0.725 0 0.2833 0.10415 0.52915 0.3125 0.7375 0.20835 0.2083 0.45415 0.3125 0.7375 0.3125Zm-2.45 5H6c-0.83335 0 -1.541665 -0.2917 -2.125 -0.875 -0.583335 -0.58335 -0.875 -1.3 -0.875 -2.15v-1.225c0 -0.2125 0.071915 -0.3907 0.21575 -0.5345 0.143665 -0.1437 0.32175 -0.2155 0.53425 -0.2155h5.225v-6.5c0 -0.4125 0.1469 -0.7657 0.44075 -1.0595 0.29365 -0.2937 0.64675 -0.4405 1.05925 -0.4405H13.5c0.4125 0 0.76565 0.1468 1.0595 0.4405 0.29365 0.2938 0.4405 0.647 0.4405 1.0595v6.5h3.125c-0.08335 -0.1667 -0.14165 -0.3375 -0.175 -0.5125 -0.03335 -0.175 -0.05 -0.3542 -0.05 -0.5375 0 -0.704 0.25 -1.30085 0.75 -1.7905 0.5 -0.4897 1.1 -0.7345 1.8 -0.7345s1.3 0.2448 1.8 0.7345c0.5 0.48965 0.75 1.0865 0.75 1.7905 0 0.61665 -0.1875 1.15415 -0.5625 1.6125 -0.375 0.4583 -0.85415 0.75415 -1.4375 0.8875v0.55c0 0.8333 -0.29165 1.54165 -0.875 2.125 -0.58335 0.5833 -1.29165 0.875 -2.125 0.875Z"
+                                    stroke-width="0.5"></path>
+                            </svg>
+                        </div>
+
+                        <div class="face left">
+                            <h2 class="head6 headCubo">Click the candle!</h2>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                id="Candle--Streamline-Rounded-Material" class="candleSvgOff candleSvg"
+                                onclick="encender(this)">
+                                <desc>
+                                    Candle Streamline Icon: https://streamlinehq.com
+                                </desc>
+                                <path fill="currentColor"
+                                    d="M6 20.5004h12c0.425 0 0.78125 -0.14375 1.06875 -0.43125 0.2875 -0.2875 0.43125 -0.64375 0.43125 -1.06875v-0.5H4.5v0.475c0 0.43215 0.14375 0.7943 0.43125 1.0865 0.2875 0.29235 0.64375 0.4385 1.06875 0.4385Zm5.975 -12.5c-0.76665 0 -1.4125 -0.27085 -1.9375 -0.8125 -0.525 -0.5417 -0.7875 -1.19585 -0.7875 -1.9625 0 -0.80001 0.23335 -1.504175 0.7 -2.11251 0.46665 -0.608335 0.975 -1.154165 1.525 -1.6375 0.08415 -0.066665 0.1719 -0.116665 0.26325 -0.15 0.09115 -0.033335 0.1784 -0.05 0.26175 -0.05 0.08335 0 0.16665 0.016665 0.25 0.05 0.08335 0.033335 0.16665 0.091665 0.25 0.175 0.51665 0.516665 1.02085 1.066665 1.5125 1.65 0.49165 0.583335 0.7375 1.275 0.7375 2.07501 0 0.76665 -0.27085 1.4208 -0.8125 1.9625 -0.54165 0.54165 -1.19585 0.8125 -1.9625 0.8125Zm-1.5 9H13.5v-6.5h-3.025v6.5Zm1.525 -10.5c0.33335 0 0.625 -0.1157 0.875 -0.347 0.25 -0.2312 0.375 -0.51375 0.375 -0.84775 0 -0.43684 -0.1319 -0.817425 -0.39575 -1.14176 -0.264 -0.3245 -0.54875 -0.637335 -0.85425 -0.9385 -0.3055 0.301165 -0.59025 0.614 -0.85425 0.9385 -0.26385 0.324335 -0.39575 0.70492 -0.39575 1.14176 0 0.334 0.125 0.61655 0.375 0.84775 0.25 0.2313 0.54165 0.347 0.875 0.347Zm8.45 10.5c0.28335 0 0.52915 -0.1042 0.7375 -0.3125 0.20835 -0.20835 0.3125 -0.4542 0.3125 -0.7375 0 -0.28335 -0.10415 -0.525 -0.3125 -0.725 -0.20835 -0.2 -0.45415 -0.3 -0.7375 -0.3 -0.28335 0 -0.52915 0.1 -0.7375 0.3 -0.20835 0.2 -0.3125 0.44165 -0.3125 0.725 0 0.2833 0.10415 0.52915 0.3125 0.7375 0.20835 0.2083 0.45415 0.3125 0.7375 0.3125Zm-2.45 5H6c-0.83335 0 -1.541665 -0.2917 -2.125 -0.875 -0.583335 -0.58335 -0.875 -1.3 -0.875 -2.15v-1.225c0 -0.2125 0.071915 -0.3907 0.21575 -0.5345 0.143665 -0.1437 0.32175 -0.2155 0.53425 -0.2155h5.225v-6.5c0 -0.4125 0.1469 -0.7657 0.44075 -1.0595 0.29365 -0.2937 0.64675 -0.4405 1.05925 -0.4405H13.5c0.4125 0 0.76565 0.1468 1.0595 0.4405 0.29365 0.2938 0.4405 0.647 0.4405 1.0595v6.5h3.125c-0.08335 -0.1667 -0.14165 -0.3375 -0.175 -0.5125 -0.03335 -0.175 -0.05 -0.3542 -0.05 -0.5375 0 -0.704 0.25 -1.30085 0.75 -1.7905 0.5 -0.4897 1.1 -0.7345 1.8 -0.7345s1.3 0.2448 1.8 0.7345c0.5 0.48965 0.75 1.0865 0.75 1.7905 0 0.61665 -0.1875 1.15415 -0.5625 1.6125 -0.375 0.4583 -0.85415 0.75415 -1.4375 0.8875v0.55c0 0.8333 -0.29165 1.54165 -0.875 2.125 -0.58335 0.5833 -1.29165 0.875 -2.125 0.875Z"
+                                    stroke-width="0.5"></path>
+                            </svg>
+                        </div>
+
+                        <div class="face right">
+                            <h2 class="head6 headCubo">Click the candle!</h2>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                id="Candle--Streamline-Rounded-Material" class="candleSvgOff candleSvg"
+                                onclick="encender(this)">
+                                <desc>
+                                    Candle Streamline Icon: https://streamlinehq.com
+                                </desc>
+                                <path fill="currentColor"
+                                    d="M6 20.5004h12c0.425 0 0.78125 -0.14375 1.06875 -0.43125 0.2875 -0.2875 0.43125 -0.64375 0.43125 -1.06875v-0.5H4.5v0.475c0 0.43215 0.14375 0.7943 0.43125 1.0865 0.2875 0.29235 0.64375 0.4385 1.06875 0.4385Zm5.975 -12.5c-0.76665 0 -1.4125 -0.27085 -1.9375 -0.8125 -0.525 -0.5417 -0.7875 -1.19585 -0.7875 -1.9625 0 -0.80001 0.23335 -1.504175 0.7 -2.11251 0.46665 -0.608335 0.975 -1.154165 1.525 -1.6375 0.08415 -0.066665 0.1719 -0.116665 0.26325 -0.15 0.09115 -0.033335 0.1784 -0.05 0.26175 -0.05 0.08335 0 0.16665 0.016665 0.25 0.05 0.08335 0.033335 0.16665 0.091665 0.25 0.175 0.51665 0.516665 1.02085 1.066665 1.5125 1.65 0.49165 0.583335 0.7375 1.275 0.7375 2.07501 0 0.76665 -0.27085 1.4208 -0.8125 1.9625 -0.54165 0.54165 -1.19585 0.8125 -1.9625 0.8125Zm-1.5 9H13.5v-6.5h-3.025v6.5Zm1.525 -10.5c0.33335 0 0.625 -0.1157 0.875 -0.347 0.25 -0.2312 0.375 -0.51375 0.375 -0.84775 0 -0.43684 -0.1319 -0.817425 -0.39575 -1.14176 -0.264 -0.3245 -0.54875 -0.637335 -0.85425 -0.9385 -0.3055 0.301165 -0.59025 0.614 -0.85425 0.9385 -0.26385 0.324335 -0.39575 0.70492 -0.39575 1.14176 0 0.334 0.125 0.61655 0.375 0.84775 0.25 0.2313 0.54165 0.347 0.875 0.347Zm8.45 10.5c0.28335 0 0.52915 -0.1042 0.7375 -0.3125 0.20835 -0.20835 0.3125 -0.4542 0.3125 -0.7375 0 -0.28335 -0.10415 -0.525 -0.3125 -0.725 -0.20835 -0.2 -0.45415 -0.3 -0.7375 -0.3 -0.28335 0 -0.52915 0.1 -0.7375 0.3 -0.20835 0.2 -0.3125 0.44165 -0.3125 0.725 0 0.2833 0.10415 0.52915 0.3125 0.7375 0.20835 0.2083 0.45415 0.3125 0.7375 0.3125Zm-2.45 5H6c-0.83335 0 -1.541665 -0.2917 -2.125 -0.875 -0.583335 -0.58335 -0.875 -1.3 -0.875 -2.15v-1.225c0 -0.2125 0.071915 -0.3907 0.21575 -0.5345 0.143665 -0.1437 0.32175 -0.2155 0.53425 -0.2155h5.225v-6.5c0 -0.4125 0.1469 -0.7657 0.44075 -1.0595 0.29365 -0.2937 0.64675 -0.4405 1.05925 -0.4405H13.5c0.4125 0 0.76565 0.1468 1.0595 0.4405 0.29365 0.2938 0.4405 0.647 0.4405 1.0595v6.5h3.125c-0.08335 -0.1667 -0.14165 -0.3375 -0.175 -0.5125 -0.03335 -0.175 -0.05 -0.3542 -0.05 -0.5375 0 -0.704 0.25 -1.30085 0.75 -1.7905 0.5 -0.4897 1.1 -0.7345 1.8 -0.7345s1.3 0.2448 1.8 0.7345c0.5 0.48965 0.75 1.0865 0.75 1.7905 0 0.61665 -0.1875 1.15415 -0.5625 1.6125 -0.375 0.4583 -0.85415 0.75415 -1.4375 0.8875v0.55c0 0.8333 -0.29165 1.54165 -0.875 2.125 -0.58335 0.5833 -1.29165 0.875 -2.125 0.875Z"
+                                    stroke-width="0.5"></path>
+                            </svg>
+                        </div>
+
+                        <div class="face top">
+                            <h2 class="head6 headCubo">Click the candle!</h2>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                id="Candle--Streamline-Rounded-Material" class="candleSvgOff candleSvg"
+                                onclick="encender(this)">
+                                <desc>
+                                    Candle Streamline Icon: https://streamlinehq.com
+                                </desc>
+                                <path fill="currentColor"
+                                    d="M6 20.5004h12c0.425 0 0.78125 -0.14375 1.06875 -0.43125 0.2875 -0.2875 0.43125 -0.64375 0.43125 -1.06875v-0.5H4.5v0.475c0 0.43215 0.14375 0.7943 0.43125 1.0865 0.2875 0.29235 0.64375 0.4385 1.06875 0.4385Zm5.975 -12.5c-0.76665 0 -1.4125 -0.27085 -1.9375 -0.8125 -0.525 -0.5417 -0.7875 -1.19585 -0.7875 -1.9625 0 -0.80001 0.23335 -1.504175 0.7 -2.11251 0.46665 -0.608335 0.975 -1.154165 1.525 -1.6375 0.08415 -0.066665 0.1719 -0.116665 0.26325 -0.15 0.09115 -0.033335 0.1784 -0.05 0.26175 -0.05 0.08335 0 0.16665 0.016665 0.25 0.05 0.08335 0.033335 0.16665 0.091665 0.25 0.175 0.51665 0.516665 1.02085 1.066665 1.5125 1.65 0.49165 0.583335 0.7375 1.275 0.7375 2.07501 0 0.76665 -0.27085 1.4208 -0.8125 1.9625 -0.54165 0.54165 -1.19585 0.8125 -1.9625 0.8125Zm-1.5 9H13.5v-6.5h-3.025v6.5Zm1.525 -10.5c0.33335 0 0.625 -0.1157 0.875 -0.347 0.25 -0.2312 0.375 -0.51375 0.375 -0.84775 0 -0.43684 -0.1319 -0.817425 -0.39575 -1.14176 -0.264 -0.3245 -0.54875 -0.637335 -0.85425 -0.9385 -0.3055 0.301165 -0.59025 0.614 -0.85425 0.9385 -0.26385 0.324335 -0.39575 0.70492 -0.39575 1.14176 0 0.334 0.125 0.61655 0.375 0.84775 0.25 0.2313 0.54165 0.347 0.875 0.347Zm8.45 10.5c0.28335 0 0.52915 -0.1042 0.7375 -0.3125 0.20835 -0.20835 0.3125 -0.4542 0.3125 -0.7375 0 -0.28335 -0.10415 -0.525 -0.3125 -0.725 -0.20835 -0.2 -0.45415 -0.3 -0.7375 -0.3 -0.28335 0 -0.52915 0.1 -0.7375 0.3 -0.20835 0.2 -0.3125 0.44165 -0.3125 0.725 0 0.2833 0.10415 0.52915 0.3125 0.7375 0.20835 0.2083 0.45415 0.3125 0.7375 0.3125Zm-2.45 5H6c-0.83335 0 -1.541665 -0.2917 -2.125 -0.875 -0.583335 -0.58335 -0.875 -1.3 -0.875 -2.15v-1.225c0 -0.2125 0.071915 -0.3907 0.21575 -0.5345 0.143665 -0.1437 0.32175 -0.2155 0.53425 -0.2155h5.225v-6.5c0 -0.4125 0.1469 -0.7657 0.44075 -1.0595 0.29365 -0.2937 0.64675 -0.4405 1.05925 -0.4405H13.5c0.4125 0 0.76565 0.1468 1.0595 0.4405 0.29365 0.2938 0.4405 0.647 0.4405 1.0595v6.5h3.125c-0.08335 -0.1667 -0.14165 -0.3375 -0.175 -0.5125 -0.03335 -0.175 -0.05 -0.3542 -0.05 -0.5375 0 -0.704 0.25 -1.30085 0.75 -1.7905 0.5 -0.4897 1.1 -0.7345 1.8 -0.7345s1.3 0.2448 1.8 0.7345c0.5 0.48965 0.75 1.0865 0.75 1.7905 0 0.61665 -0.1875 1.15415 -0.5625 1.6125 -0.375 0.4583 -0.85415 0.75415 -1.4375 0.8875v0.55c0 0.8333 -0.29165 1.54165 -0.875 2.125 -0.58335 0.5833 -1.29165 0.875 -2.125 0.875Z"
+                                    stroke-width="0.5"></path>
+                            </svg>
+                        </div>
+
+                        <div class="face bottom">
+                            <h2 class="head6 headCubo">Click the candle!</h2>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                id="Candle--Streamline-Rounded-Material" class="candleSvgOff candleSvg"
+                                onclick="encender(this)">
+                                <desc>
+                                    Candle Streamline Icon: https://streamlinehq.com
+                                </desc>
+                                <path fill="currentColor"
+                                    d="M6 20.5004h12c0.425 0 0.78125 -0.14375 1.06875 -0.43125 0.2875 -0.2875 0.43125 -0.64375 0.43125 -1.06875v-0.5H4.5v0.475c0 0.43215 0.14375 0.7943 0.43125 1.0865 0.2875 0.29235 0.64375 0.4385 1.06875 0.4385Zm5.975 -12.5c-0.76665 0 -1.4125 -0.27085 -1.9375 -0.8125 -0.525 -0.5417 -0.7875 -1.19585 -0.7875 -1.9625 0 -0.80001 0.23335 -1.504175 0.7 -2.11251 0.46665 -0.608335 0.975 -1.154165 1.525 -1.6375 0.08415 -0.066665 0.1719 -0.116665 0.26325 -0.15 0.09115 -0.033335 0.1784 -0.05 0.26175 -0.05 0.08335 0 0.16665 0.016665 0.25 0.05 0.08335 0.033335 0.16665 0.091665 0.25 0.175 0.51665 0.516665 1.02085 1.066665 1.5125 1.65 0.49165 0.583335 0.7375 1.275 0.7375 2.07501 0 0.76665 -0.27085 1.4208 -0.8125 1.9625 -0.54165 0.54165 -1.19585 0.8125 -1.9625 0.8125Zm-1.5 9H13.5v-6.5h-3.025v6.5Zm1.525 -10.5c0.33335 0 0.625 -0.1157 0.875 -0.347 0.25 -0.2312 0.375 -0.51375 0.375 -0.84775 0 -0.43684 -0.1319 -0.817425 -0.39575 -1.14176 -0.264 -0.3245 -0.54875 -0.637335 -0.85425 -0.9385 -0.3055 0.301165 -0.59025 0.614 -0.85425 0.9385 -0.26385 0.324335 -0.39575 0.70492 -0.39575 1.14176 0 0.334 0.125 0.61655 0.375 0.84775 0.25 0.2313 0.54165 0.347 0.875 0.347Zm8.45 10.5c0.28335 0 0.52915 -0.1042 0.7375 -0.3125 0.20835 -0.20835 0.3125 -0.4542 0.3125 -0.7375 0 -0.28335 -0.10415 -0.525 -0.3125 -0.725 -0.20835 -0.2 -0.45415 -0.3 -0.7375 -0.3 -0.28335 0 -0.52915 0.1 -0.7375 0.3 -0.20835 0.2 -0.3125 0.44165 -0.3125 0.725 0 0.2833 0.10415 0.52915 0.3125 0.7375 0.20835 0.2083 0.45415 0.3125 0.7375 0.3125Zm-2.45 5H6c-0.83335 0 -1.541665 -0.2917 -2.125 -0.875 -0.583335 -0.58335 -0.875 -1.3 -0.875 -2.15v-1.225c0 -0.2125 0.071915 -0.3907 0.21575 -0.5345 0.143665 -0.1437 0.32175 -0.2155 0.53425 -0.2155h5.225v-6.5c0 -0.4125 0.1469 -0.7657 0.44075 -1.0595 0.29365 -0.2937 0.64675 -0.4405 1.05925 -0.4405H13.5c0.4125 0 0.76565 0.1468 1.0595 0.4405 0.29365 0.2938 0.4405 0.647 0.4405 1.0595v6.5h3.125c-0.08335 -0.1667 -0.14165 -0.3375 -0.175 -0.5125 -0.03335 -0.175 -0.05 -0.3542 -0.05 -0.5375 0 -0.704 0.25 -1.30085 0.75 -1.7905 0.5 -0.4897 1.1 -0.7345 1.8 -0.7345s1.3 0.2448 1.8 0.7345c0.5 0.48965 0.75 1.0865 0.75 1.7905 0 0.61665 -0.1875 1.15415 -0.5625 1.6125 -0.375 0.4583 -0.85415 0.75415 -1.4375 0.8875v0.55c0 0.8333 -0.29165 1.54165 -0.875 2.125 -0.58335 0.5833 -1.29165 0.875 -2.125 0.875Z"
+                                    stroke-width="0.5"></path>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://unpkg.com/@studio-freight/lenis"></script>
+    <script src="{% static 'js/port.js' %}"></script>
+    <script src="{% static 'js/snake.js' %}"></script>
+</body>
+</html>

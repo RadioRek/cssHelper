@@ -17,11 +17,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Static files (CSS, JavaScript, Images)
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-]
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
@@ -29,10 +24,9 @@ STATICFILES_DIRS = [
 SECRET_KEY = 'django-insecure-9i&j)#qa94uoyb037v(w$t#3vze1h5mik6&5m(@)b3a7egaya('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['novaspace.cl', 'www.novaspace.cl']
 
 # Application definition
 
@@ -122,6 +116,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field

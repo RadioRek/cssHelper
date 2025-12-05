@@ -1,0 +1,12 @@
+[Unit]
+Description=Gunicorn service
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/CssHelper
+ExecStart=/var/www/CssHelper/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/var/www/CssHelper/gunicorn.sock CssHelper.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
