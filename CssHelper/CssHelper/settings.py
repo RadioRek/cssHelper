@@ -29,6 +29,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['novaspace.cl', 'www.novaspace.cl', 'localhost', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://novaspace.cl",
+    "https://www.novaspace.cl",
+]
+
 # Application definition
 
 INSTALLED_APPS = [
