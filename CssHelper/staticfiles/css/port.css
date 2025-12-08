@@ -1,0 +1,772 @@
+/*==============================================================
+    Seccion: Misc y animaciones compartidas
+==============================================================*/
+@font-face {
+    font-family: header;
+    src: url(../fonts/Megrim-Regular.ttf);
+}
+
+@font-face {
+    font-family: paragraph;
+    src: url(../fonts/Jura-Regular.ttf);
+}
+
+html {
+    font-size: 16px;
+    margin: 0;
+    height: 100%;
+}
+
+html.lenis {
+    height: auto;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-image: linear-gradient(rgba(242, 89, 18, 0.2), transparent 12px);
+    background-size: 40px 40px;
+    background-repeat: repeat;
+    background-color: rgb(9, 0, 26);
+    timeline-scope: --cssIsStupid;
+
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto;
+}
+
+.white {
+    color: #eeedff;
+}
+
+.arrowAndText {
+    position: absolute;
+    bottom: -10rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.arrowText {
+    text-align: center;
+}
+
+.arrowDown {
+    width: 3rem;
+    height: 3rem;
+}
+
+.arrowDown path {
+    fill: currentColor;
+    will-change: color, filter;
+}
+
+
+/*==============================================================
+    Seccion: Navbar
+==============================================================*/
+.barraNavegacion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: url(../img/dude.png);
+    background-size: cover;
+    background-position: center;
+
+    z-index: 30;
+    box-shadow: 0px 0px 10px 0px rgba(238, 237, 255, 0.5);
+}
+
+.barraNavegacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 0, 26, 0.8);
+    z-index: 10;
+}
+
+.navMenu {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    width: fit-content;
+    position: absolute;
+    z-index: 30;
+}
+
+@media (max-width: 576px) {
+    .navMenu {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.navItem {
+    text-decoration: none;
+    font-family: paragraph;
+    transition: transform 0.3s;
+    border-radius: 0.5rem;
+    padding: 0rem 1rem;
+    filter: drop-shadow(0 0 0.75rem rgba(238, 237, 255, 0.5));
+    font-size: inherit;
+}
+
+.navItem:hover {
+    transform: scale(1.1);
+}
+
+.nombreCont {
+    position: absolute;
+    z-index: 30;
+}
+
+.nombre {
+    font-size: inherit;
+    font-family: header;
+    text-align: center;
+    margin: 0;
+}
+
+.palabrasClave {
+    display: flex;
+    gap: 3rem;
+    font-family: header;
+    font-size: 1.802rem;
+    z-index: 30;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 576px) {
+    .palabrasClave {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+.spotlight {
+    width: 100%;
+    bottom: -220px;
+    left: 0;
+    transform: none;
+    position: absolute;
+    height: 400px;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center,
+            rgba(238, 237, 255, 0.15) 0%,
+            rgba(185, 184, 201, 0.1) 20%,
+            rgba(135, 134, 150, 0.05) 40%,
+            transparent 80%);
+}
+
+/*==============================================================
+    Seccion: Presentacion principal
+==============================================================*/
+.mainContent {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    z-index: 5;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100vh;
+    gap: 2rem;
+    padding-bottom: 20rem;
+    padding-top: 5rem;
+}
+
+@media (max-width: 576px) {
+    .mainContent {
+        width: 90vw;
+    }
+}
+
+.contenedorYoMismo {
+    view-timeline: --cssIsStupid block;
+
+}
+
+.contenedorLed {
+    position: relative;
+    flex-basis: 300px;
+    flex-grow: 1;
+    max-width: 400px;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background: rgb(9, 0, 26);
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+
+}
+
+.fotoWrap {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.fotoWrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(9, 0, 26, 0.6);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.yoMismisimo {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    object-fit: cover;
+    border-radius: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+/*==============================================================
+    Seccion: Grid experiencia y tecnologias
+==============================================================*/
+.experiencia {
+    position: relative;
+}
+
+.contentCrazy {
+    position: relative;
+    background-image: url(../img/bgCity.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 20rem 0;
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            rgb(9, 0, 26) 20%,
+            rgb(9, 0, 26) 80%,
+            transparent 100%);
+}
+
+@media (max-width: 576px) {
+    .contentCrazy {
+        mask-image: linear-gradient(to bottom,
+                transparent 0%,
+                rgb(9, 0, 26) 10%,
+                rgb(9, 0, 26) 90%,
+                transparent 100%);
+    }
+}
+
+.contentCrazy::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 0, 26, 0.8);
+    z-index: 1;
+}
+
+.turboGrid {
+    display: grid;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "exp comen1 comen2 tecs"
+        "exp comen3 comen4 tecs"
+        "det det det det";
+    position: relative;
+    z-index: 2;
+}
+
+@media (max-width: 576px) {
+    .turboGrid {
+        grid-template-areas:
+            "exp"
+            "det"
+            "comen1"
+            "comen2"
+            "comen3"
+            "comen4"
+            "tecs";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 90vw;
+    }
+}
+
+.expCont {
+    grid-area: exp;
+}
+
+.expDetalle {
+    grid-area: det;
+}
+
+.comen1 {
+    grid-area: comen1;
+}
+
+.comen2 {
+    grid-area: comen2;
+}
+
+.comen3 {
+    grid-area: comen3;
+}
+
+.comen4 {
+    grid-area: comen4;
+}
+
+.tecsCont {
+    grid-area: tecs;
+}
+
+.gridCont {
+    position: relative;
+    min-height: 100px;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+.tecIconList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.imgIcon {
+    max-width: 80px;
+    max-height: 80px;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.exp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.expDetalle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+@media (max-width: 576px) {
+    .expDetalle {
+        flex-direction: column;
+    }
+}
+
+/*==============================================================
+    Seccion: Proyectos grid
+==============================================================*/
+.proyectosCrazy {
+    position: relative;
+    padding: 20rem 0;
+}
+
+.proyectosGrid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-rows: auto;
+    position: relative;
+    z-index: 2;
+    grid-template-areas:
+        "proy1 proy2"
+}
+
+@media (max-width: 576px) {
+    .proyectosGrid {
+        grid-template-areas:
+            "proy1"
+            "proy2";
+        grid-template-columns: 1fr;
+        width: 90vw;
+    }
+}
+
+.proyecto1 {
+    grid-area: proy1;
+}
+
+.proyecto2 {
+    grid-area: proy2;
+}
+
+.proyectoItem {
+    position: relative;
+    box-sizing: border-box;
+    min-height: 100px;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgb(9, 0, 26);
+}
+
+.subgridProyecto {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+    gap: 1rem;
+}
+
+@media (max-width: 576px) {
+    .subgridProyecto {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.tecWrapper {
+    padding: 0;
+    border-radius: 0.5rem;
+}
+
+.tecProyectoItem {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.stackHead {
+    margin-bottom: 1rem;
+}
+
+.killMe {
+    margin-top: auto;
+    width: 100%;
+}
+
+/*==============================================================
+    Seccion: Cosas interesantes
+==============================================================*/
+.cosasInteresantes {
+    display: flex;
+    justify-content: center;
+    padding: 20rem 0;
+
+}
+
+.cosasInteresantes,
+.cosasInteresantes * {
+    pointer-events: auto;
+}
+
+.candleSvg {
+    transition: transform 0.2s, height 0.2s, width 0.2s;
+
+}
+
+.candleSvg:hover {
+    cursor: pointer;
+}
+
+
+.candleSvgOff {
+    color: #585766;
+    fill: #585766;
+    width: 40px;
+    height: 40px;
+}
+
+.candleSvgOn {
+    color: #f25912;
+    fill: #f25912;
+    filter: drop-shadow(0 0 8px #f25912);
+    width: 50px;
+    height: 50px;
+}
+
+
+.snake {
+    border-radius: 0.5rem;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: rgb(9, 0, 26);
+}
+
+.espacioSnake {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.loosingScreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(9, 0, 26, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    z-index: 10;
+}
+
+.loosingCard {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.botonReset {
+    background: transparent;
+}
+
+.botonReset:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.segmento {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    box-sizing: border-box;
+
+    transition: position 1s linear;
+}
+
+.comida {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: #f25912;
+    border-radius: 4px;
+}
+
+
+/*==============================================================
+    Seccion: Footer
+==============================================================*/
+.footerPortafolio {
+    height: 800px;
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(9, 0, 26, 1) 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (max-width: 576px) {
+    .footerPortafolio {
+        flex-direction: column;
+    }
+}
+
+.clickAndDrag {
+    position: relative;
+    border-radius: 0.5rem;
+    background: rgb(9, 0, 26);
+    box-sizing: border-box;
+    padding: 6rem;
+}
+
+.cube-wrapper {
+    width: 150px;
+    height: 150px;
+    perspective: 450px;
+    margin: auto;
+}
+
+.cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.1s linear;
+}
+
+.cube,
+.face {
+    user-select: none;
+}
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+
+    background-color: rgba(9, 0, 26, 0.9);
+
+    pointer-events: auto;
+    border: 1px solid #585766;
+    transition: transform 0.2s, border-radius 0.2s;
+}
+
+.headCubo {
+    color: #585766;
+}
+
+
+.front {
+    transform: translateZ(75px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(75px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(75px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(75px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(75px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(75px);
+}
+
+.formularioGoz {
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+}
+
+.formularioContacto {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.inputCustom {
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    width: 300px;
+    background: transparent;
+
+}
+
+/* quitar los efectos de focus */
+.inputCustom:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.inputCustom:autofill,
+.textAreaCustom:autofill {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+.textAreaCustom {
+    resize: none;
+    box-sizing: border-box;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: transparent;
+}
+
+.textAreaCustom:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.botonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.botonContacto {
+    text-decoration: none;
+    font-family: paragraph;
+    transition: transform 0.3s;
+    border-radius: 0.5rem;
+    padding: 0rem 1rem;
+    filter: drop-shadow(0 0 0.75rem rgba(238, 237, 255, 0.5));
+    font-size: inherit;
+    background-color: transparent;
+}
+
+.botonContacto:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+
+@media (max-width: 576px) {}

@@ -1,0 +1,525 @@
+/* animaciones aqui porque me estan volviendooo looooco */
+.animEncogerBarra {
+    animation: encogerBarra both;
+    animation-timeline: --cssIsStupid;
+    animation-timing-function: linear;
+    animation-range-start: entry 0%;
+    animation-range-end: 50%;
+}
+
+@keyframes encogerBarra {
+    0% {
+        height: 100vh;
+    }
+
+    100% {
+        height: 4vh;
+    }
+}
+
+.animNavMenuMoverDerecha {
+    animation: navMenuMoverDerecha both;
+    animation-timeline: --cssIsStupid;
+    animation-timing-function: linear;
+    animation-range-start: entry 0%;
+    animation-range-end: 50%;
+}
+
+@keyframes navMenuMoverDerecha {
+    0% {
+        font-size: 1.802rem;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    100% {
+        font-size: 1.125rem;
+        top: 50%;
+        right: 1rem;
+        transform: translate(0%, -50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .animNavMenuMoverDerecha {
+        animation-range-start: entry 0%;
+        animation-range-end: 30%;
+    }
+
+    @keyframes navMenuMoverDerecha {
+        0% {
+            font-size: 1.802rem;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            opacity: 1;
+
+        }
+
+        100% {
+            font-size: 1.125rem;
+            top: 50%;
+            right: 1rem;
+            transform: translate(0%, -50%);
+            opacity: 0;
+        }
+    }
+}
+
+.animMoverNombre {
+    animation: moverNombre both;
+    animation-timeline: --cssIsStupid;
+    animation-timing-function: linear;
+    animation-range-start: entry 0%;
+    animation-range-end: 50%;
+}
+
+@keyframes moverNombre {
+    0% {
+        font-size: 2.027rem;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+
+    }
+
+    100% {
+        font-size: 1.424rem;
+        top: 50%;
+        left: 1rem;
+        transform: translate(0, -50%);
+    }
+}
+
+@media (max-width: 576px) {
+    .animMoverNombre {
+        animation-range-start: entry 0%;
+        animation-range-end: 30%;
+    }
+
+    @keyframes moverNombre {
+        0% {
+            font-size: 1.424rem;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            opacity: 1;
+        }
+
+        100% {
+            font-size: 1.266rem;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            opacity: 1;
+        }
+    }
+}
+
+.animClave1 {
+    animation: animacionPalabrasClave both;
+    animation-timeline: --cssIsStupid;
+    animation-timing-function: linear;
+    animation-range-start: entry 10%;
+    animation-range-end: 30%;
+}
+
+.animClave2 {
+    animation: animacionPalabrasClave both;
+    animation-timeline: --cssIsStupid;
+    animation-timing-function: linear;
+    animation-range-start: entry 20%;
+    animation-range-end: 40%;
+}
+
+.animClave3 {
+    animation: animacionPalabrasClave both;
+    animation-timeline: --cssIsStupid;
+    animation-timing-function: linear;
+    animation-range-start: entry 30%;
+    animation-range-end: 50%;
+}
+
+@keyframes animacionPalabrasClave {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 576px) {
+    .animClave1,
+    .animClave2,
+    .animClave3 {
+        animation-range-start: entry 0%;
+        animation-range-end: 30%;
+    }
+
+
+    @keyframes animacionPalabrasClave {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        100% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+    }
+}
+
+/* =================================================== */
+.animFadeInScroll {
+    animation: fadeIn both;
+    animation-timeline: scroll();
+    animation-timing-function: linear;
+    animation-range-start: 10%;
+    animation-range-end: 20%;
+}
+
+.animFadeInView {
+    animation: fadeIn both;
+    animation-timeline: view();
+    animation-timing-function: ease;
+    animation-range-start: 10%;
+    animation-range-end: 20%;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animMoveGrid {
+    animation: moveGrid infinite linear;
+    animation-duration: 5s;
+    animation-timeline: auto;
+    animation-range-start: normal;
+    animation-range-end: normal;
+}
+
+@keyframes moveGrid {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 80px 80px;
+    }
+}
+
+/* =================================================== */
+.animBordeTextoParpadear {
+    animation: parpadearBorde, parpadearTexto;
+    animation-duration: 0.5s, 0.5s;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: alternate, alternate;
+    animation-timing-function: cubic-bezier(0.00, 0.99, 1.00, 0.01), cubic-bezier(0.00, 0.99, 1.00, 0.01);
+}
+
+.animBordeTextoParpadearNaranja {
+    animation: parpadearBordeNaranja, parpadearTexto;
+    animation-duration: 0.5s, 0.5s;
+    animation-iteration-count: infinite, infinite;
+    animation-direction: alternate, alternate;
+    animation-timing-function: cubic-bezier(0.00, 0.99, 1.00, 0.01), cubic-bezier(0.00, 0.99, 1.00, 0.01);
+}
+
+.animTextoParpadear {
+    animation: parpadearTexto;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.00, 0.99, 1.00, 0.01);
+}
+
+.animBordeParpadear {
+    animation: parpadearBorde;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.00, 0.99, 1.00, 0.01);
+}
+
+.animAparecerParpadearBorde {
+    animation-name: aparecerBorde, parpadearBorde;
+
+    animation-duration: 0.001s, 0.5s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 10%, normal;
+    animation-range-end: 20%, normal;
+}
+
+.animAparecerParpadearBordeNaranja {
+    animation-name: aparecerBorde, parpadearBordeNaranja;
+
+    animation-duration: 0.001s, 0.5s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 10%, normal;
+    animation-range-end: 20%, normal;
+}
+
+@keyframes parpadearBordeNaranja {
+    0% {
+        border: 1px solid #585766;
+        box-shadow: none;
+    }
+
+    30% {
+        border: 1px solid #cc3800;
+        box-shadow: 0 0 4px #cc3800, inset 0 0 8px #cc3800;
+    }
+
+    80% {
+        border: 1px solid #585766;
+        box-shadow: none;
+    }
+
+    95% {
+        border: 1px solid #f25912;
+        box-shadow: 0 0 4px #ff641f, inset 0 0 8px #ff641f;
+    }
+
+    100% {
+        border: 1px solid #ff641f;
+        box-shadow: 0 0 8px #ff641f, inset 0 0 8px #ff641f;
+    }
+
+}
+
+
+@keyframes parpadearBorde {
+
+    0% {
+        border: 1px solid #585766;
+        box-shadow: none;
+    }
+
+    30% {
+        border: 1px solid #b9b8c9;
+        box-shadow: 0 0 8px #b9b8c9, inset 0 0 8px #b9b8c9;
+    }
+
+    80% {
+        border: 1px solid #585766;
+        box-shadow: none;
+    }
+
+    95% {
+        border: 1px solid #b9b8c9;
+        box-shadow: 0 0 8px #eeedff, inset 0 0 8px #eeedff;
+    }
+
+    100% {
+        border: 1px solid #eeedff;
+        box-shadow: 0 0 8px #eeedff, inset 0 0 8px #eeedff;
+    }
+
+}
+
+
+@keyframes parpadearTexto {
+    0% {
+        color: #585766;
+        text-shadow: none;
+    }
+
+    30% {
+        color: #b9b8c9;
+        text-shadow: 0 0 4px #b9b8c9;
+    }
+
+    80% {
+        color: #585766;
+        text-shadow: none;
+    }
+
+    95% {
+        color: #b9b8c9;
+        text-shadow: 0 0 4px #eeedff;
+    }
+
+    100% {
+        color: #eeedff;
+        text-shadow: 0 0 8px #eeedff;
+    }
+}
+
+@keyframes aparecerBorde {
+    0% {
+        opacity: 0;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =================================================== */
+
+
+
+.animFadeInFromSideTextoParpadear {
+    animation-name: fadeInFromSide, parpadearTexto;
+
+    animation-duration: 0.001s, 0.5s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 10%, normal;
+    animation-range-end: 20%, normal;
+}
+
+.animFadeInTextoParpadear {
+    animation-name: fadeIn, parpadearTexto;
+
+    animation-duration: 0.001s, 0.5s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 10%, normal;
+    animation-range-end: 20%, normal;
+}
+
+
+.animFadeInFromSide {
+    animation-name: fadeInFromSide;
+
+    animation-duration: 0.001s;
+
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+
+    animation-timeline: view();
+
+    animation-range-start: 10%;
+    animation-range-end: 20%;
+}
+
+@keyframes fadeInFromSide {
+    0% {
+        opacity: 0;
+        transform: translateX(-5%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =================================================== */
+.animFadeInViewParpadearSVG {
+    animation-name: fadeIn, parpadearSVG;
+
+    animation-duration: 0.001s, 0.5s;
+
+    animation-iteration-count: 1, infinite;
+    animation-direction: normal, alternate;
+    animation-fill-mode: both, none;
+    animation-timing-function: linear, cubic-bezier(0.00, 0.99, 1.00, 0.01);
+
+    animation-timeline: view(), auto;
+
+    animation-range-start: 20%, normal;
+    animation-range-end: 30%, normal;
+}
+
+
+@keyframes parpadearSVG {
+    0% {
+        color: #585766;
+        filter: drop-shadow(0 0 4px #585766);
+    }
+
+    30% {
+        color: #b9b8c9;
+        filter: drop-shadow(0 0 4px #b9b8c9);
+    }
+
+    80% {
+        color: #585766;
+        filter: drop-shadow(0 0 4px #585766);
+    }
+
+    95% {
+        color: #eeedff;
+        filter: drop-shadow(0 0 4px #eeedff);
+    }
+
+    100% {
+        color: #eeedff;
+        filter: drop-shadow(0 0 8px #eeedff);
+    }
+}
+
+
+
+.animCandleFlicker {
+    animation-name: candleFlicker;
+
+    animation-duration: 1s;
+
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+
+@keyframes candleFlicker {
+    0% {
+        fill: #F25912;
+        filter: drop-shadow(0 0 8px #F25912);
+    }
+
+    50% {
+        fill: #FF9E40;
+        filter: drop-shadow(0 0 20px #FF9E40);
+    }
+
+    100% {
+        fill: #F25912;
+        filter: drop-shadow(0 0 8px #F25912);
+    }
+}

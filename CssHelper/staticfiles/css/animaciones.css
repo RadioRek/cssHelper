@@ -1,0 +1,85 @@
+@keyframes navItemAnimacion {
+    0% {
+        font-size: 39.81px;
+    }
+
+    100% {
+        font-size: 19.2px;
+    }
+}
+
+@keyframes navMenuAnimacion {
+    0% {
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+
+    100% {
+        top: 50%;
+        right: 2%;
+        transform: translate(0, -50%);
+    }
+}
+
+
+
+@keyframes nombreLogoAnimacion {
+    0% {
+        font-size: 47.78px;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+
+    }
+
+    100% {
+        font-size: 23.04px;
+        left: 2%;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+}
+
+@keyframes palabrasClaveAnimacion {
+    0% {
+        font-size: 39.81px;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -70%);
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+        top: 75%;
+    }
+
+    100% {
+        font-size: 27.65px;
+        opacity: 0;
+        top: 99%;
+
+    }
+}
+
+
+@keyframes bordeCentroIzq {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes bordeCentroDer {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 50%;
+    }
+}
