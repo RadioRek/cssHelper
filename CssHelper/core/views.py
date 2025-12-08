@@ -19,7 +19,6 @@ def ortegaNicolas(request):
         nombre = request.POST.get('nombre')
         email = request.POST.get('email')
         mensaje = request.POST.get('mensaje')
-        print(nombre, email, mensaje)
         message_obj = message(nombre=nombre, email=email, mensaje=mensaje)
         message_obj.save()
 
