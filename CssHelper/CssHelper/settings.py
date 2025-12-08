@@ -24,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9i&j)#qa94uoyb037v(w$t#3vze1h5mik6&5m(@)b3a7egaya('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# dkslajflksa
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['novaspace.cl', 'www.novaspace.cl', 'localhost', '127.0.0.1']
