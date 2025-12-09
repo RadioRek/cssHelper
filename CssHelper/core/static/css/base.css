@@ -1,3 +1,7 @@
+.txt-en { display: none; }
+html[lang="en"] .txt-es { display: none; }
+html[lang="en"] .txt-en { display: inline; }
+
 .navegacion {
     background-color: #211832;
     display: flex;

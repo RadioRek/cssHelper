@@ -18,6 +18,15 @@ let durations = {
     "#contacto": 2
 }
 
+const lang = navigator.language || navigator.userLanguage;
+if (lang.startsWith("en")) {
+    document.documentElement.setAttribute("lang", "en");
+
+} else {
+    document.documentElement.setAttribute("lang", "es");
+
+}
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault()

@@ -604,12 +604,14 @@ body {
     Seccion: Footer
 ==============================================================*/
 .footerPortafolio {
+    position: relative;
     height: 800px;
     background-image: linear-gradient(to bottom, transparent 10%, rgba(9, 0, 26, 1) 20%);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
+    padding-bottom: 4rem;
 }
 
 @media (max-width: 576px) {
@@ -770,3 +772,8 @@ body {
 
 
 @media (max-width: 576px) {}
+
+.footerText {
+    position: absolute;
+    bottom: 1rem;
+}

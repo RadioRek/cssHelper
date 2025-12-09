@@ -332,11 +332,21 @@ function loose() {
     let resetButton = document.getElementById('resetButtonSnake');
     let loosingMessage = document.getElementById('loosingMessageSnake');
 
-    loosingMessage.textContent = '¡Perdiste!';
-    finalScore.textContent = `Tu puntaje final es: ${snake.length}`;
+    let lang = document.documentElement.getAttribute('lang');
+
+    if (lang === 'en') {
+        loosingMessage.textContent = 'You lost!';
+        finalScore.textContent = `Your final score is: ${snake.length}`;
+        resetButton.textContent = 'Play Again!';
+    } else {
+        loosingMessage.textContent = '¡Perdiste!';
+        finalScore.textContent = `Tu puntaje final es: ${snake.length}`;
+        resetButton.textContent = '¡Jugar de nuevo!';
+    }
+
     loosingScreen.style.display = 'flex';
-    resetButton.textContent = 'Play Again!';
 }
+
 
 function resetGame() {
     snake = [
